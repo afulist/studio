@@ -1,0 +1,55 @@
+<!-- Fixed navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" 1style="background-color:#f5f5f5;border-bottom: 1px solid #e0e0e0;" style="font-size: 15px;">
+    <div class="container">
+        <div class="navbar-header" >
+            <a class="navbar-brand" ui-sref="main.home">
+                <font>
+                    <font>LOGO</font>
+                </font>
+            </a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li ui-sref-active="active-font">
+                    <a ui-sref="main.favor">
+                        <font>
+                            <font>我的收藏</font>
+                        </font>
+                    </a>
+                </li>
+                <li ui-sref-active="active-font">
+                    <a ui-sref="main.my">
+                        <font>
+                            <font>我的規劃</font>
+                        </font>
+                    </a>
+                </li>
+            </ul>
+
+            <p class="nav navbar-nav visible-xs visible-sm" style="margin-top: 10px;margin-left: 10px;color:white;">
+                <font ng-hide="!loginStatus || loginStatus.status != 'connected'">{$apiMe.name$}</font>&nbsp;
+                <a class="btn btn-danger btn-sm" ng-click="logout()" ng-hide="!loginStatus || loginStatus.status != 'connected'">登出</a>
+                <a class="btn btn-primary btn-sm" ng-click="login()" ng-hide="loginStatus.status == 'connected'">以Facebook登入</a>
+            </p>
+            <p class="nav navbar-nav navbar-right hidden-xs hidden-sm" style="margin-top: 10px;color:white;">
+                <font ng-hide="!loginStatus || loginStatus.status != 'connected'">{$apiMe.name$}</font>&nbsp;
+                <a class="btn btn-danger btn-sm" ng-click="logout()" ng-hide="!loginStatus || loginStatus.status != 'connected'">登出</a>
+                <a class="btn btn-primary btn-sm" ng-click="login()" ng-hide="loginStatus.status == 'connected'">以Facebook登入</a>
+            </p>
+
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</div>
+
+<div class="container" ui-view="main"></div>
+
+    <hr>
+
+    <footer>
+        <p>
+            <font>
+                <font>© travel 2014</font>
+            </font>
+        </p>
+    </footer>

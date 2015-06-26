@@ -5,21 +5,21 @@ angular.module('travelApp')
         return {
             getPlan: function(keyword, location, planName, userId, order, days, typeBackpacking, typeFree, typeTour, scrollPos, amount) {
                 var params = {
-                    keyword: 'none',
+                    keyword: keyword,
                     location: location,
                     planName: planName,
                     userId: userId,
-                    order: 'new',
-                    days: 0,
-                    isBackpacking: true,
-                    isFree: true,
-                    isTour: true,
-                    scrollPos: 0,
-                    amount: 40
+                    order: order,
+                    days: days,
+                    typeBackpacking: typeBackpacking,
+                    typeFree: typeFree,
+                    typeTour: typeTour,
+                    scrollPos: scrollPos,
+                    amount: amount
                 };
                 return $http({
                     method: 'GET',
-                    url: 'api/plan/',
+                    url: 'json/plan.json',
                     params: params
                 });
             },

@@ -1,7 +1,7 @@
 <!-- Fixed navbar -->
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" 1style="background-color:#f5f5f5;border-bottom: 1px solid #e0e0e0;" style="font-size: 15px;">
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
-        <div class="navbar-header" >
+        <div class="navbar-header">
             <a class="navbar-brand" ui-sref="main.home">
                 <font>
                     <font>LOGO</font>
@@ -26,12 +26,12 @@
                 </li>
             </ul>
 
-            <p class="nav navbar-nav visible-xs visible-sm" style="margin-top: 10px;margin-left: 10px;color:white;">
+            <p class="nav navbar-nav visible-xs visible-sm" style="margin-top: 10px;margin-left: 10px;">
                 <font ng-hide="!loginStatus || loginStatus.status != 'connected'">{$apiMe.name$}</font>&nbsp;
                 <a class="btn btn-danger btn-sm" ng-click="logout()" ng-hide="!loginStatus || loginStatus.status != 'connected'">登出</a>
                 <a class="btn btn-primary btn-sm" ng-click="login()" ng-hide="loginStatus.status == 'connected'">以Facebook登入</a>
             </p>
-            <p class="nav navbar-nav navbar-right hidden-xs hidden-sm" style="margin-top: 10px;color:white;">
+            <p class="nav navbar-nav navbar-right hidden-xs hidden-sm" style="margin-top: 10px;">
                 <font ng-hide="!loginStatus || loginStatus.status != 'connected'">{$apiMe.name$}</font>&nbsp;
                 <a class="btn btn-danger btn-sm" ng-click="logout()" ng-hide="!loginStatus || loginStatus.status != 'connected'">登出</a>
                 <a class="btn btn-primary btn-sm" ng-click="login()" ng-hide="loginStatus.status == 'connected'">以Facebook登入</a>

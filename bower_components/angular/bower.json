@@ -1,7 +1,7 @@
 {
   "name": "angular",
   "version": "1.4.9",
-  "main": "./custom/angular14.js",
+  "main": "../../bower_custom/angular/angular149.js",
   "ignore": [],
   "dependencies": {
   }

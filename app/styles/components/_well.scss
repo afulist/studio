@@ -1,0 +1,40 @@
+$default-text-shadow-color: rgba(black, 0.6);
+$default-text-shadow-blur: 3px;
+$default-text-shadow-v-offset: 1px;
+
+@import "compass/css3";
+
+.well {
+	margin-left: 0px;
+	margin-right: 0px;
+	h3{
+		margin-top: 0px;
+    a{
+      color: #428bca;
+      &:hover {
+        color: #054175;
+      }
+    }
+	}
+	a{
+		position: relative;
+		text-decoration: none;
+    color: #376894;
+      &:hover {
+        color: #000000;
+      }
+		img{
+			width: 85px;
+			height: 85px;
+			margin-right: 16px;
+
+		}
+		div{
+			position: absolute;
+			left: 7px;
+			top: 28px;
+			color: white;
+			@include single-text-shadow;
+		}
+	}
+}

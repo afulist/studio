@@ -6,17 +6,15 @@ var conf = require('./conf');
 var preprocess = require('gulp-preprocess');
 // CUSTOM: get argv from cmd
 var args = process.argv.slice(3);
-var env = 'prod'; // CUSTOM: default value
+var env = 'prod'; // default value
 
 // CUSTOM: set env for gulp-preprocess format as >gulp build --env $arg
 if (args[0] === "--env" && args[1] === "dev") {
   env = 'dev';
-  console.log('proj switch to dev');
 } else if (args[0] === "--env" && args[1] === "stage") {
   env = 'stage';
-  console.log('proj switch to stage');
 } else {
-  console.log('proj switch to prod');
+  // default value
 }
 
 var $ = require('gulp-load-plugins')({
@@ -24,6 +22,9 @@ var $ = require('gulp-load-plugins')({
 });
 
 gulp.task('partials', function () {
+  // CUSTOM: show env
+  console.log('task partials build proj in ' + env);
+
   return gulp.src([
     path.join(conf.paths.src, '/app/**/*.html'),
     path.join(conf.paths.tmp, '/serve/app/**/*.html')
@@ -53,6 +54,9 @@ gulp.task('html', ['inject', 'partials'], function () {
   var jsFilter = $.filter('**/*.js', { restore: true });
   var cssFilter = $.filter('**/*.css', { restore: true });
   var assets;
+
+  // CUSTOM: show env
+  console.log('task html build proj in ' + env);
 
   return gulp.src(path.join(conf.paths.tmp, '/serve/*.html'))
     .pipe(preprocess({context: { ENV: env }})) // CUSTOM: To set environment variables in-line

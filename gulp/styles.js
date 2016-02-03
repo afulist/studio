@@ -16,7 +16,7 @@ gulp.task('styles-reload', ['styles'], function() {
     .pipe(browserSync.stream());
 });
 
-gulp.task('styles', ['clean'], function() {
+gulp.task('styles', function() {
   return buildStyles();
 });
 

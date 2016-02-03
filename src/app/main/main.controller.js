@@ -6,8 +6,11 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr) {
+  function MainController($timeout, webDevTec, toastr, $firebaseObject) {
     var vm = this;
+
+    var ref = new Firebase("https://docs-examples.firebaseio.com/web/saving-data/fireblog/posts"); //eslint-disable-line
+    vm.data = $firebaseObject(ref);
 
     vm.awesomeThings = [];
     vm.classAnimation = '';

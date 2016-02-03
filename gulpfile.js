@@ -33,5 +33,5 @@ gulp.task('default', function () {
  *  main optimization build task by 'gulp build --env $arg'
  */
 gulp.task('build', ['clean'], function () {
-  gulp.start('build-after-clean');
+  gulp.start('build-without-clean');
 });

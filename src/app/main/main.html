@@ -3,7 +3,17 @@
   <md-content>
     <header>
       <acme-navbar creation-date="main.creationDate"></acme-navbar>
-      {{ main.data }}
+
+      {{ bt }}
+      <br>
+
+      <input type="text" ng-model="bt.nickname"/>
+
+      <ul>
+        <li ng-repeat="user in main.users">
+          {{ user.nickname }}
+        </li>
+      </ul>
     </header>
 
     <section class="jumbotron">

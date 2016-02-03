@@ -6,11 +6,18 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr, $firebaseObject) {
+  function MainController($scope, $timeout, webDevTec, toastr, $firebaseObject, $firebaseArray) {
     var vm = this;
 
-    var ref = new Firebase("https://docs-examples.firebaseio.com/web/saving-data/fireblog/posts"); //eslint-disable-line
-    vm.data = $firebaseObject(ref);
+    // test Three-Way Binding
+    var ref = new Firebase("https://popping-fire-6571.firebaseio.com/users"); //eslint-disable-line
+    var obj = $firebaseObject(ref.child('gracehop'));
+    obj.$bindTo($scope, "bt").then(function() {
+      //$scope.data.nickname = "baz";  // will be saved to the database
+      //ref.set({ nickname: "baz" });  // this would update the database and $scope.data
+    });
+    // test $firebaseArray
+    vm.users = $firebaseArray(ref);
 
     vm.awesomeThings = [];
     vm.classAnimation = '';

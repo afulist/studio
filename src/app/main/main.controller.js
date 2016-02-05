@@ -6,16 +6,16 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($scope, $timeout, webDevTec, toastr, firebase, $firebaseObject, $firebaseArray) {
+  function MainController($scope, $log, $timeout, webDevTec, toastr, firebase, $firebaseObject, $firebaseArray) {
     var vm = this;
 
     var fb = new Firebase(firebase.root); //eslint-disable-line
     // grant full read / write access by Firebase Secret
     fb.authWithCustomToken(firebase.secret, function(error, authData) {
       if (error) {
-        console.log("Authentication Failed!", error);
+        $log("Authentication Failed!", error);
       } else {
-        console.log("Authenticated successfully with payload:", authData);
+        $log("Authenticated successfully with payload:", authData);
       }
     });
     vm.env = $firebaseObject(fb);

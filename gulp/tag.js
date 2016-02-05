@@ -1,3 +1,4 @@
+// CUSTOM: using 'gulp tag' to tag in git from package.json
 'use strict';
 
 var gulp = require('gulp');

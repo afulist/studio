@@ -6,8 +6,11 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($scope, $timeout, webDevTec, toastr, $firebaseObject, $firebaseArray) {
+  function MainController($scope, $timeout, webDevTec, toastr, firebase, $firebaseObject, $firebaseArray) {
     var vm = this;
+
+    var fb = new Firebase(firebase.root); //eslint-disable-line
+    vm.env = $firebaseObject(fb);
 
     // test Three-Way Binding
     var ref = new Firebase("https://popping-fire-6571.firebaseio.com/users"); //eslint-disable-line

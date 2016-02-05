@@ -1,13 +1,14 @@
 /* deploy note */
 // deploy to dev
 // 1.gulp build --env dev
-// 2.firebase deploy:hosting -f pytrip-dev -m v0.0.1
+// 2.firebase deploy:hosting -f pytrip-dev -m v0.0.0
 // 3.firebase deploy:rules -f pytrip-dev
 
 // deploy to stage
 // 1.gulp build --env stage
-// 2.firebase deploy:hosting -f pytrip-stage -m v0.0.1
-// 3.firebase deploy:rules -f pytrip-stage
+// 2.firebase deploy:hosting -f pytrip-stage -m v0.0.0
+// *3.firebase deploy:rules -f pytrip
+// * affect prod env
 
 // deploy to prod
 // 1.gulp build

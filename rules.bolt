@@ -1,0 +1,10 @@
+// rules.bolt
+hasNotExpired(timestamp) = timestamp > (now - 600000);
+type Message {
+  content: String,
+  timestamp: Number,
+}
+path /messages/$message is Message {
+  read() = hasNotExpired(this.timestamp);
+  write() = hasNotExpired(this.timestamp);
+}

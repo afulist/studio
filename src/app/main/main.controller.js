@@ -10,6 +10,14 @@
     var vm = this;
 
     var fb = new Firebase(firebase.root); //eslint-disable-line
+    // grant full read / write access by Firebase Secret
+    fb.authWithCustomToken(firebase.secret, function(error, authData) {
+      if (error) {
+        console.log("Authentication Failed!", error);
+      } else {
+        console.log("Authenticated successfully with payload:", authData);
+      }
+    });
     vm.env = $firebaseObject(fb);
 
     // test Three-Way Binding

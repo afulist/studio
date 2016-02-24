@@ -1,0 +1,8 @@
+{
+  "name": "angular",
+  "version": "1.4.9",
+  "main": "../../bower_custom/angular/angular149.js",
+  "ignore": [],
+  "dependencies": {
+  }
+}

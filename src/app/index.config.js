@@ -11,12 +11,18 @@
     // Enable log
     $logProvider.debugEnabled(true);
 
-    // Set options third-party lib
-    toastrConfig.allowHtml = true;
-    toastrConfig.timeOut = 3000;
-    toastrConfig.positionClass = 'toast-top-right';
-    toastrConfig.preventDuplicates = true;
-    toastrConfig.progressBar = true;
+    // ==Set options third-party lib==
+    // toastrConfig
+    angular.extend(toastrConfig, {
+      allowHtml: true,
+      positionClass: 'toast-top-right',
+      timeOut: 3000,
+      preventDuplicates: true,
+      progressBar: false,
+      preventOpenDuplicates: false,
+      closeButton: true
+    });
+
   }
 
 })();

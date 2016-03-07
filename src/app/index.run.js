@@ -20,6 +20,7 @@
     firebase.root = 'https://pytrip.firebaseio.com/';
     /* @endif */
 
+    // debug log
     $log.debug('runBlock end');
   }
 

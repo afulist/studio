@@ -8,7 +8,8 @@
   /** @ngInject */
   function firebase() {
     return {
-      root: '', // set in index.config
+      root: '', // set in index.run
+      //secret: '', // set in index.run
       test: test
     };
 

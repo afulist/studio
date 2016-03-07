@@ -30,12 +30,24 @@
       ga('send', 'pageview');
     </script>
   </head>
-  <body>
+  <body layout="column">
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div ui-view></div>
+    <!-- view -->
+    <!-- TODO-toolbar: move to directive -->
+    <md-toolbar layout="row">
+      <div class="md-toolbar-tools">
+        <button ng-click="toggleSidenav('left')" hide-gt-sm class="menuBtn" aria-label="Toggle Menu">
+        </button>
+        <h1 layout-align-gt-sm="center">
+          Hello World
+        </h1>
+      </div>
+    </md-toolbar>
+
+    <div ui-view layout="row" flex style="overflow: auto;"></div>
 
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->

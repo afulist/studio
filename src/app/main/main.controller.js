@@ -6,55 +6,66 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($scope, $log, $timeout, webDevTec, toastr, firebase, $firebaseObject, $firebaseArray) {
+  function MainController($log, $scope, toastr, $mdSidenav, firebase, $firebaseObject, $firebaseArray) {
     var vm = this;
 
-    var fb = new Firebase(firebase.root); //eslint-disable-line
-    // grant full read / write access by Firebase Secret
-    fb.authWithCustomToken(firebase.secret, function(error, authData) {
-      if (error) {
-        $log("Authentication Failed!", error);
-      } else {
-        $log("Authenticated successfully with payload:", authData);
-      }
-    });
-    vm.env = $firebaseObject(fb);
-
-    // test Three-Way Binding
-    var ref = new Firebase("https://popping-fire-6571.firebaseio.com/users"); //eslint-disable-line
-    var obj = $firebaseObject(ref.child('gracehop'));
-    obj.$bindTo($scope, "bt").then(function() {
-      //$scope.data.nickname = "baz";  // will be saved to the database
-      //ref.set({ nickname: "baz" });  // this would update the database and $scope.data
-    });
-    // test $firebaseArray
-    vm.users = $firebaseArray(ref);
-
-    vm.awesomeThings = [];
-    vm.classAnimation = '';
+    // ==view data==
     vm.creationDate = 1453453611143;
-    vm.showToastr = showToastr;
 
-    activate();
+    // ==view func==
+    vm.click = click;
+    vm.toggleSidenav = toggleSidenav;
 
-    function activate() {
-      getWebDevTec();
-      $timeout(function() {
-        vm.classAnimation = 'rubberBand';
-      }, 4000);
+    // ==init func==
+    init();
+
+    // ==all func==
+    // init
+    function init() {
+      // test toastr
+      toastr.success('page load');
+      // test Side Navigation
+      var list = [];
+      for (var i = 0; i < 100; i++) {
+        list.push({
+          name: 'List Item ' + i,
+          idx: i
+        });
+      }
+      vm.list = list;
     }
 
-    function showToastr() {
-      toastr.info('Fork <a href="https://github.com/Swiip/generator-gulp-angular" target="_blank"><b>generator-gulp-angular</b></a>');
-      vm.classAnimation = '';
+    // TODO-toolbar: move to directive
+    function toggleSidenav(menuId) {
+      $mdSidenav(menuId).toggle();
     }
 
-    function getWebDevTec() {
-      vm.awesomeThings = webDevTec.getTec();
+    // click buttom
+    function click() {
+      $log.info('test firebase');
+      // TODO-fb: test firebase
+      var ref = new Firebase(firebase.root); //eslint-disable-line
+      // grant full read / write access by Firebase Secret
+      ref.authWithCustomToken(firebase.secret, function(error, authData) {
+        if (error) {
+          $log.debug("Authentication Failed!", error);
+        } else {
+          $log.debug("Authenticated successfully with payload:", authData);
+        }
+      });
+      // assign ng data
+      vm.env = $firebaseObject(ref.child('test'));
 
-      angular.forEach(vm.awesomeThings, function(awesomeThing) {
-        awesomeThing.rank = Math.random();
+      // Three-Way Binding
+      var ref2 = new Firebase("https://popping-fire-6571.firebaseio.com/users"); //eslint-disable-line
+      // assign ng data
+      vm.users = $firebaseArray(ref2);
+      var obj = $firebaseObject(ref2.child('gracehop'));
+      obj.$bindTo($scope, "bt").then(function() {
+        //$scope.data.nickname = "baz";  // will be saved to the database
+        //ref2.set({ nickname: "baz" });  // this would update the database and $scope.data
       });
     }
+
   }
 })();

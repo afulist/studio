@@ -14,6 +14,7 @@
 
     // ==view func==
     vm.click = click;
+    vm.toggleRight = toggleRight;
 
     // ==init func==
     init();
@@ -32,6 +33,10 @@
         });
       }
       vm.list = list;
+    }
+
+    function toggleRight() {
+      $mdSidenav('right').toggle();
     }
 
     // click buttom

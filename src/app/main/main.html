@@ -1,5 +1,5 @@
-<md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
-  <div>Side Navigation</div>
+<!-- mobile sideNav -->
+<md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')" hide-gt-sm>
   <div>LOGO - mobile</div>
   <md-list>
     <md-list-item ng-repeat="li in main.list">
@@ -14,6 +14,7 @@
   </md-list>
 </md-sidenav>
 
+<!-- content -->
 <md-content layout="column" id="content" flex class="md-padding">
   Content - {{main.relativeDate}}
 
@@ -24,7 +25,8 @@
   <p ng-repeat="x in [1,2,3,4,5,6,7,8,9,0]">Test {{x}}</p>
 </md-content>
 
-<md-sidenav layout="column" class="md-sidenav-right md-whiteframe-z2" md-component-id="right" md-is-locked-open="$mdMedia('gt-sm')">
+<!-- mobile sideNav -->
+<md-sidenav layout="column" class="md-sidenav-right md-whiteframe-z2" md-component-id="right" md-is-locked-open="$mdMedia('gt-sm')" hide-gt-sm>
   <div>Side Navigation</div>
   <md-list>
     <md-list-item ng-repeat="li in main.list">

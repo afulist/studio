@@ -6,7 +6,7 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($log, $scope, moment, toastr, $mdSidenav, firebase, $firebaseObject, $firebaseArray) {
+  function MainController($log, $scope, moment, toastr, firebase, $firebaseObject, $firebaseArray) {
     var vm = this;
 
     // ==view data==
@@ -14,7 +14,6 @@
 
     // ==view func==
     vm.click = click;
-    vm.toggleRight = toggleRight;
 
     // ==init func==
     init();
@@ -33,10 +32,6 @@
         });
       }
       vm.list = list;
-    }
-
-    function toggleRight() {
-      $mdSidenav('right').toggle();
     }
 
     // click buttom

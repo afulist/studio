@@ -1,12 +1,40 @@
 <md-toolbar layout="row">
-  <div class="md-toolbar-tools">
-    <button ng-click="dvm.toggleSidenav('left')" hide-gt-sm class="menuBtn" aria-label="Toggle Menu">
-    </button>
+
+  <!-- desktop -->
+  <div class="md-toolbar-tools" hide-sm>
     <h1 layout-align-gt-sm="center">
-      {{ dvm.title }}
+      {{ dvm.logo }} - desktop
     </h1>
     <span flex=""></span>
-    <button ng-click="dvm.toggleSidenav('right')" hide-gt-sm class="menuBtn" aria-label="Toggle Menu">
-    </button>
+    <md-button class="md-raised" style="color: black;">
+      我的收藏
+    </md-button>
+    <md-button class="md-raised" style="color: black;">
+      我的規劃
+    </md-button>
+    <md-button class="md-raised" style="color: black;">
+      更多
+    </md-button>
   </div>
+
+  <!-- mobile -->
+  <div class="md-toolbar-tools" hide-gt-sm>
+    <button ng-click="dvm.toggleSidenav('left')" class="menuBtn" aria-label="Toggle Menu">
+    	<md-icon>menu</md-icon>
+    </button>
+    <button ng-click="" class="menuBtn" aria-label="Toggle Menu">
+    	<md-icon>search</md-icon>
+    </button>
+    <span flex=""></span>
+    <md-button class="md-primary" ng-click=""  aria-label="Toggle Menu">
+      我的收藏
+    </md-button>
+    <md-button class="md-primary" ng-click=""  aria-label="Toggle Menu">
+      我的規劃
+    </md-button>
+    <md-button class="md-primary" ng-click="dvm.toggleSidenav('right')"  aria-label="Toggle Menu">
+      更多
+    </md-button>
+  </div>
+
 </md-toolbar>

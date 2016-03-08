@@ -1,5 +1,6 @@
 <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
   <div>Side Navigation</div>
+  <div>LOGO - mobile</div>
   <md-list>
     <md-list-item ng-repeat="li in main.list">
       <div class="md-list-item-text">
@@ -15,9 +16,7 @@
 
 <md-content layout="column" id="content" flex class="md-padding">
   Content - {{main.relativeDate}}
-  <md-button ng-click="main.toggleRight()" ng-hide="isOpenRight()" class="md-primary">
-    Toggle right
-  </md-button>
+
   <p ng-repeat="x in [1,2,3,4,5,6,7,8,9,0]">Test {{x}}</p>
   <p ng-repeat="x in [1,2,3,4,5,6,7,8,9,0]">Test {{x}}</p>
   <p ng-repeat="x in [1,2,3,4,5,6,7,8,9,0]">Test {{x}}</p>

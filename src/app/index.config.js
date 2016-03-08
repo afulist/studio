@@ -15,7 +15,7 @@
     // toastrConfig
     angular.extend(toastrConfig, {
       allowHtml: true,
-      positionClass: 'toast-top-right',
+      positionClass: 'toast-bottom-right',
       timeOut: 3000,
       preventDuplicates: true,
       progressBar: false,

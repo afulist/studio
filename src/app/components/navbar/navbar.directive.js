@@ -11,7 +11,7 @@
       restrict: 'E',
       templateUrl: 'app/components/navbar/navbar.html',
       scope: {
-          title: '@'
+          logo: '@'
       },
       controller: NavbarController,
       controllerAs: 'dvm',

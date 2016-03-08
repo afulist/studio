@@ -6,15 +6,14 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($log, $scope, toastr, $mdSidenav, firebase, $firebaseObject, $firebaseArray) {
+  function MainController($log, $scope, moment, toastr, $mdSidenav, firebase, $firebaseObject, $firebaseArray) {
     var vm = this;
 
     // ==view data==
-    vm.creationDate = 1453453611143;
+    vm.relativeDate = moment(1453453611143).fromNow();
 
     // ==view func==
     vm.click = click;
-    vm.toggleSidenav = toggleSidenav;
 
     // ==init func==
     init();
@@ -33,11 +32,6 @@
         });
       }
       vm.list = list;
-    }
-
-    // TODO-toolbar: move to directive
-    function toggleSidenav(menuId) {
-      $mdSidenav(menuId).toggle();
     }
 
     // click buttom

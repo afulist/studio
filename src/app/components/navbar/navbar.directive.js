@@ -11,21 +11,29 @@
       restrict: 'E',
       templateUrl: 'app/components/navbar/navbar.html',
       scope: {
-          creationDate: '='
+          title: '@'
       },
       controller: NavbarController,
-      controllerAs: 'vm',
+      controllerAs: 'dvm',
       bindToController: true
     };
 
     return directive;
 
     /** @ngInject */
-    function NavbarController(moment) {
+    function NavbarController($mdSidenav) {
       var vm = this;
 
-      // "vm.creation" is avaible by directive option "bindToController: true"
-      vm.relativeDate = moment(vm.creationDate).fromNow();
+      // ==view data==
+      // "vm.title" is avaible by directive option "bindToController: true"
+
+      // ==view func==
+      vm.toggleSidenav = toggleSidenav;
+
+      // ==all func==
+      function toggleSidenav(menuId) {
+        $mdSidenav(menuId).toggle();
+      }
     }
   }
 

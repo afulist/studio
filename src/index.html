@@ -36,17 +36,7 @@
     <![endif]-->
 
     <!-- view -->
-    <!-- TODO-toolbar: move to directive -->
-    <md-toolbar layout="row">
-      <div class="md-toolbar-tools">
-        <button ng-click="toggleSidenav('left')" hide-gt-sm class="menuBtn" aria-label="Toggle Menu">
-        </button>
-        <h1 layout-align-gt-sm="center">
-          Hello World
-        </h1>
-      </div>
-    </md-toolbar>
-
+    <acme-navbar title="Hello"></acme-navbar>
     <div ui-view layout="row" flex style="overflow: auto;"></div>
 
     <!-- build:js(src) scripts/vendor.js -->

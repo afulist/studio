@@ -4,7 +4,7 @@
 
   angular
     .module('travel')
-    .constant('malarkey', malarkey)
-    .constant('moment', moment);
+    .constant('malarkey', malarkey) // using var malarkey as service from bower
+    .constant('moment', moment); // using var moment as service from bower
 
 })();

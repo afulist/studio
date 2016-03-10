@@ -21,7 +21,7 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController($mdSidenav) {
+    function NavbarController($log, $mdSidenav, $mdBottomSheet) {
       var vm = this;
 
       // ==view data==
@@ -29,10 +29,20 @@
 
       // ==view func==
       vm.toggleSidenav = toggleSidenav;
+      vm.showTopNavBottomSheet = showTopNavBottomSheet;
 
       // ==all func==
       function toggleSidenav(menuId) {
         $mdSidenav(menuId).toggle();
+      }
+      function showTopNavBottomSheet() {
+        $mdBottomSheet.show({
+          templateUrl: 'app/components/navbar/topnav-bottom-sheet.html',
+          controller: 'TopNavBottomSheetController',
+          controllerAs: 'bvm'
+        }).then(function(clickedItem) {
+          $log.debug(clickedItem);
+        });
       }
     }
   }

@@ -5,7 +5,7 @@
 // bower:scss
 // endbower
 
-@import url(//fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
+/*@import url(//fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);*/
 
 @font-face {
   font-family: 'Material Icons';
@@ -45,26 +45,10 @@
 }
 
 html {
-  font-family: 'Roboto Slab', serif;
+  /*font-family: 'Roboto Slab', serif;*/
 }
 
-.menuBtn {
-  background-color: transparent;
-  border: none;
-  height: 38px;
-  width: 36px;
-}
 
-md-toolbar h1 {
-  font-weight: normal;
-}
-
-md-list .md-button {
-  color: inherit;
-  font-weight: 500;
-  text-align: left;
-  width: 100%;
-}
 
 /* @if ENV='dev' */
 /* @endif */

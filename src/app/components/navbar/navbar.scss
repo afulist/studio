@@ -1,4 +1,19 @@
+.menuBtn {
+  height: 38px;
+  width: 105px;
+  font-size: 19px;
+}
 
+.menuFunction {
+  font-size:30px;
+  width:100%;
+}
+
+.menuFunctionIcon {
+  color: rgba(255,255,255,0.87) !important;
+  margin-right: -4px;
+  margin-left: -4px;
+}
 
 
 /* @if ENV='dev' */

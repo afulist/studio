@@ -6,14 +6,15 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($log, $scope, moment, toastr, firebase, $firebaseObject, $firebaseArray) {
+  function MainController($log, $scope, $mdSidenav, moment, toastr, firebase, $firebaseObject, $firebaseArray) {
     var vm = this;
 
     // ==view data==
     vm.relativeDate = moment(1453453611143).fromNow();
 
     // ==view func==
-    vm.click = click;
+    vm.toggleSide = toggleSide;
+    vm.fire = fire;
 
     // ==init func==
     init();
@@ -34,10 +35,14 @@
       vm.list = list;
     }
 
-    // click buttom
-    function click() {
+    // Hide or Show sideNav area
+    function toggleSide(sideNavId) {
+      $mdSidenav(sideNavId).toggle();
+    }
+
+    // TODO-fb: test firebase
+    function fire() {
       $log.info('test firebase');
-      // TODO-fb: test firebase
       var ref = new Firebase(firebase.root); //eslint-disable-line
       // grant full read / write access by Firebase Secret
       ref.authWithCustomToken(firebase.secret, function(error, authData) {

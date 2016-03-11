@@ -1,6 +1,13 @@
 .menuBtn {
   height: 38px;
+  min-width: 88px;
   width: 105px;
+  font-size: 19px;
+}
+
+.menuBtn-m {
+  height: 38px;
+  min-width: 0px; /* need to specify width in style */
   font-size: 19px;
 }
 

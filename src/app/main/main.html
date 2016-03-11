@@ -18,6 +18,25 @@
 <!-- content -->
 <md-content layout="column" id="content" flex class="md-padding">
   Content - {{main.relativeDate}}
+  <p>
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+      <md-button class="md-raised">Button</md-button>
+      <md-button class="md-raised md-primary">Button</md-button>
+      <md-button class="md-raised md-primary md-hue-1">Button</md-button>
+      <md-button class="md-raised md-primary md-hue-2">Button</md-button>
+      <md-button class="md-raised md-primary md-hue-3">Button</md-button>
+      <md-button class="md-raised md-accent">accent</md-button>
+      <md-button class="md-raised md-warn">warn</md-button>
+      <md-button ng-disabled="true" class="md-raised md-primary">Disabled</md-button>
+      <br>
+      <md-button class="md-primary">Click me</md-button>
+      <md-button class="md-primary md-hue-1">Click me</md-button>
+      <md-button class="md-primary md-hue-2">Click me</md-button>
+      <md-button class="md-primary md-hue-3">Click me</md-button>
+      <md-button class="md-accent">or maybe me</md-button>
+      <md-button class="md-warn">Careful</md-button>
+    </section>
+  </p>
 
   <p ng-repeat="x in [1,2,3,4,5,6,7,8,9,0]">Test {{x}}</p>
   <p ng-repeat="x in [1,2,3,4,5,6,7,8,9,0]">Test {{x}}</p>

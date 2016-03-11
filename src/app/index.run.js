@@ -6,7 +6,7 @@
     .run(runBlock);
 
   /** @ngInject */
-  // after config block
+  // after config block: Service Setting
   function runBlock($log, firebase) {
     // firebase env
     /* @if ENV='dev' */

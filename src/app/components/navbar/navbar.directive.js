@@ -33,6 +33,11 @@
 
       // ==all func==
       function toggleSidenav(menuId) {
+        if (menuId === 'left') {
+          $mdSidenav('right').close();
+        } else {
+          $mdSidenav('left').close();
+        }
         $mdSidenav(menuId).toggle();
       }
       function showTopNavBottomSheet() {

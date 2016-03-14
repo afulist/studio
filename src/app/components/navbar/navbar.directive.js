@@ -34,11 +34,14 @@
       // ==all func==
       function toggleSidenav(menuId) {
         if (menuId === 'left') {
-          $mdSidenav('right').close();
+          $mdSidenav('right').close().then(function(){
+             $mdSidenav(menuId).toggle();
+          });
         } else {
-          $mdSidenav('left').close();
+          $mdSidenav('left').close().then(function(){
+             $mdSidenav(menuId).toggle();
+          });
         }
-        $mdSidenav(menuId).toggle();
       }
       function showTopNavBottomSheet() {
         $mdBottomSheet.show({

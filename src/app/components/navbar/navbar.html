@@ -1,5 +1,5 @@
 <!-- desktop -->
-<md-toolbar layout="row" hide-sm>
+<md-toolbar layout="row" hide-sm hide-xs>
   <div class="md-toolbar-tools">
     <h1 layout-align-gt-sm="center">
       {{ dvm.logo }} - desktop
@@ -18,7 +18,7 @@
 </md-toolbar>
 
 
-<!-- mobile -->
+<!-- mobile: button desc changed by routing -->
 <md-toolbar layout="row" layout-align="space-between center" hide-gt-sm>
   <div>
     <md-button class="md-primary menuBtn-m" style="width: 60px;" ng-click="dvm.toggleSidenav('left')"  aria-label="Toggle Side">
@@ -27,7 +27,7 @@
   </div>
   <div>
     <md-button class="md-primary menuBtn menuFunction" ng-click="dvm.showTopNavBottomSheet()"  aria-label="Menu Function">
-      我的收藏
+       首頁
       <md-icon class="menuFunctionIcon">
         expand_more
       </md-icon>

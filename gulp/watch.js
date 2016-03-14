@@ -28,8 +28,8 @@ gulp.task('watch', ['inject'], function () {
   gulp.watch(path.join(conf.paths.src, '/app/**/*.js'), function(event) {
     if(isOnlyChange(event)) {
       // CUSTOM: Divider
-      console.log('======================================================');
-      console.log('======================================================');
+      console.log('===========================================================');
+      console.log('===========================start===========================');
       gulp.start('scripts-reload');
     } else {
       gulp.start('inject-reload');

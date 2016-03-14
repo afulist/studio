@@ -6,15 +6,15 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($log, $scope, $mdSidenav, moment, toastr, firebase, $firebaseObject, $firebaseArray) {
+  function MainController($log, $mdSidenav) {
     var vm = this;
 
     // ==view data==
-    vm.relativeDate = moment(1453453611143).fromNow();
+    //vm.relativeDate = moment(1453453611143).fromNow();
 
     // ==view func==
     vm.toggleSide = toggleSide;
-    vm.fire = fire;
+    //vm.fire = fire;
 
     // ==init func==
     init();
@@ -23,16 +23,7 @@
     // init
     function init() {
       // test toastr
-      toastr.success('page load');
-      // test Side Navigation
-      var list = [];
-      for (var i = 0; i < 100; i++) {
-        list.push({
-          name: 'List Item ' + i,
-          idx: i
-        });
-      }
-      vm.list = list;
+      //toastr.success('page load');
     }
 
     // Hide or Show sideNav area
@@ -41,7 +32,7 @@
     }
 
     // TODO-fb: test firebase
-    function fire() {
+    /*function fire() {
       $log.info('test firebase');
       var ref = new Firebase(firebase.root); //eslint-disable-line
       // grant full read / write access by Firebase Secret
@@ -64,7 +55,7 @@
         //$scope.data.nickname = "baz";  // will be saved to the database
         //ref2.set({ nickname: "baz" });  // this would update the database and $scope.data
       });
-    }
+    }*/
 
   }
 })();

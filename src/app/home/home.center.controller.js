@@ -1,0 +1,28 @@
+(function() {
+  'use strict';
+
+  angular
+    .module('travel')
+    .controller('HomeCenterController', HomeCenterController);
+
+  /** @ngInject */
+  function HomeCenterController($log, moment) {
+    var vm = this;
+
+    // ==view data==
+    vm.relativeDate = moment(1453453611143).fromNow();
+
+    // ==view func==
+    vm.init = init;
+
+    // ==init func==
+    init();
+
+    // ==all func==
+    // init
+    function init() {
+      $log.debug('load controller');
+    }
+
+  }
+})();

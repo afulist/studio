@@ -1,5 +1,5 @@
 /* deploy note */
-// deploy to dev
+// [DISABLE]deploy to dev
 // 1.gulp build --env dev
 // 2.firebase deploy:hosting -f pytrip-dev -m v0.0.0
 // 3.firebase-bolt rules.bolt

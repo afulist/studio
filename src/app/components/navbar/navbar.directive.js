@@ -32,6 +32,7 @@
       vm.showTopNavBottomSheet = showTopNavBottomSheet;
 
       // ==all func==
+      // open or close Sidenav exclusive
       function toggleSidenav(menuId) {
         if (menuId === 'left') {
           $mdSidenav('right').close().then(function(){
@@ -43,7 +44,9 @@
           });
         }
       }
-      function showTopNavBottomSheet() {
+
+      // show BottomSheet internally
+      function bottomSheet() {
         $mdBottomSheet.show({
           templateUrl: 'app/components/navbar/topnav-bottom-sheet.html',
           controller: 'TopNavBottomSheetController',
@@ -52,6 +55,22 @@
           $log.debug(clickedItem);
         });
       }
+
+      // check Sidenav then show BottomSheet
+      function showTopNavBottomSheet() {
+        if ($mdSidenav('right').isOpen()) {
+          $mdSidenav('right').close().then(function(){
+             bottomSheet();
+          });
+        } else if($mdSidenav('left').isOpen()) {
+          $mdSidenav('left').close().then(function(){
+             bottomSheet();
+          });
+        } else {
+          bottomSheet();
+        }
+      }
+
     }
   }
 

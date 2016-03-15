@@ -8,8 +8,20 @@
   /** @ngInject */
   // before run block: Provider Setting
   function config($logProvider, $mdThemingProvider, toastrConfig) {
+    // ==Set options ==
+    // console log config
+    /* @if ENV='dev' */
     // Enable log
     $logProvider.debugEnabled(true);
+    /* @endif */
+    /* @if ENV='stage' **
+    // Enable log
+    $logProvider.debugEnabled(false);
+    /* @endif */
+    /* @if ENV='prod' **
+    // Enable log
+    $logProvider.debugEnabled(false);
+    /* @endif */
 
     // ==Set options third-party lib==
     // angular material config

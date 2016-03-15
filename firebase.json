@@ -1,15 +1,18 @@
 /* deploy note */
 // [DISABLE]deploy to dev
+// 0.gulp serve:dist --env dev // still enable this line
 // 1.gulp build --env dev
 // 2.firebase deploy:hosting -f pytrip-dev -m v0.0.0
 // 3.firebase-bolt rules.bolt
 // 4.firebase deploy:rules -f pytrip-dev
 //
 // deploy to stage
+// 0.gulp serve:dist --env stage
 // 1.gulp build --env stage
 // 2.firebase deploy:hosting -f pytrip-stage -m v0.0.0
 //
 // deploy to prod
+// 0.gulp serve:dist
 // 1.gulp build
 // 2.firebase deploy:hosting
 // 3.firebase-bolt rules.bolt

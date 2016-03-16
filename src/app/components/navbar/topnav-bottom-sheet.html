@@ -1,13 +1,11 @@
-<md-bottom-sheet class="md-list md-has-header" ng-cloak>
-
-  <!-- <md-subheader>Actions</md-subheader> -->
+<md-bottom-sheet class="md-list" ng-cloak>
   <md-list>
     <md-list-item>
       <md-button
           ng-click="bvm.listItemClick('home')"
           md-autofocus="false"
           class="md-list-item-content" >
-        <md-icon >menu</md-icon>
+        <md-icon >home</md-icon>
         <span class="md-inline-list-icon-label">首頁</span>
       </md-button>
     </md-list-item>
@@ -16,7 +14,7 @@
           ng-click="bvm.listItemClick('search')"
           md-autofocus="false"
           class="md-list-item-content" >
-        <md-icon >menu</md-icon>
+        <md-icon >search</md-icon>
         <span class="md-inline-list-icon-label">搜尋</span>
       </md-button>
     </md-list-item>
@@ -25,7 +23,8 @@
           ng-click="bvm.listItemClick('myPlan')"
           md-autofocus="true"
           class="md-list-item-content" >
-        <md-icon >menu</md-icon>
+        <md-icon >assignment_turned_in</md-icon>
+        <!-- <md-icon >work</md-icon> -->
         <span class="md-inline-list-icon-label">我的規劃</span>
       </md-button>
     </md-list-item>
@@ -34,7 +33,7 @@
           ng-click="bvm.listItemClick('myFavor')"
           md-autofocus="false"
           class="md-list-item-content" >
-        <md-icon >menu</md-icon>
+        <md-icon >favorite</md-icon>
         <span class="md-inline-list-icon-label">我的收藏</span>
       </md-button>
     </md-list-item>
@@ -43,10 +42,9 @@
           ng-click="bvm.listItemClick('more')"
           md-autofocus="false"
           class="md-list-item-content" >
-        <md-icon >menu</md-icon>
+        <md-icon >more_vert</md-icon>
         <span class="md-inline-list-icon-label">更多</span>
       </md-button>
     </md-list-item>
   </md-list>
-
 </md-bottom-sheet>

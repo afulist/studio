@@ -4,6 +4,42 @@
     <h1 layout-align-gt-sm="center">
       {{ dvm.logo }}
     </h1>
+    <!-- search location selector -->
+    <md-whiteframe class="md-whiteframe-2dp search-select" layout layout-align="center center">
+      <md-input-container>
+        <label>&nbsp;</label>
+        <md-select class="md-search-loc" ng-model="dvm.selectedLoc"aria-label="search-loc" ng-model-options="{trackBy: '$value.id'}" placeholder="搜尋地區">
+          <md-option ng-value="{{loc}}" ng-repeat="loc in dvm.locations">
+            {{loc.name}}
+          </md-option>
+        </md-select>
+      </md-input-container>
+    </md-whiteframe>
+    <!-- search keyword autocomplete -->
+    <form ng-submit="dvm.search()" class="search-keyowrd">
+      <md-autocomplete
+          width="250px"
+          ng-disabled="dvm.isDisabled"
+          md-no-cache="dvm.noCache"
+          md-selected-item="dvm.selectedItem"
+          md-search-text-change="dvm.searchTextChange(dvm.searchText)"
+          md-search-text="dvm.searchText"
+          md-selected-item-change="dvm.selectedItemChange(item)"
+          md-items="item in dvm.querySearch(dvm.searchText)"
+          md-item-text="item.display"
+          md-min-length="0"
+          placeholder="行程名稱、城市的關鍵字">
+        <md-item-template>
+          <span md-highlight-text="dvm.searchText" md-highlight-flags="^i">{{item.display}}</span>
+        </md-item-template>
+        <md-not-found>
+          <div tabIndex="-1" ng-click="dvm.search()" style="font-size: 17px;">
+            搜尋{{dvm.loction.name}}地區: <strong>{{dvm.searchText}}</strong>
+          </div>
+        </md-not-found>
+      </md-autocomplete>
+    </form>
+
     <span flex=""></span>
     <md-button class="md-raised menuBtn" style="color: black;">
       我的規劃

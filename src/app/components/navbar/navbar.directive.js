@@ -25,11 +25,18 @@
       var vm = this;
 
       // ==view data==
-      // "vm.title" is avaible by directive option "bindToController: true"
+      vm.selectedLoc = { id: 2, name: '台灣' };
+      vm.locations = [
+        { id: 2, name: '台灣' },
+        { id: 1, name: '全部地區' },
+        { id: 3, name: '東南亞' },{ id: 6, name: '東東南亞' },{ id: 7, name: '東南亞東東' },
+        { id: 5, name: 'bbbbbbbbbbbbbbbbbbbbbbbb111' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' },{ id: 4, name: 'aaaaaaaaaaaaa' }
+      ];
 
       // ==view func==
       vm.toggleSidenav = toggleSidenav;
       vm.showTopNavBottomSheet = showTopNavBottomSheet;
+      vm.search = search;
 
       // ==all func==
       // open or close Sidenav exclusive
@@ -69,6 +76,11 @@
         } else {
           bottomSheet();
         }
+      }
+
+      // search keyword
+      function search() {
+        $log.debug('search');
       }
 
     }

@@ -22,6 +22,56 @@
   margin-left: -4px;
 }
 
+.md-inline-list-icon-label {
+  font-size: 19px;
+  display: inline-block;
+  padding-left: 13px;
+  padding-right: 10px;
+  margin-top: -12px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.search-select {
+  margin-left: 35px;
+  padding-left: 3px;
+  padding-right: 3px;
+  height: 40px;
+  width: 120px; /*tune for item*/
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  font-size: 19px;
+  background-color: white;
+}
+
+.search-keyowrd {
+  margin-left: -22px;
+  padding: 20px;
+}
+
+md-select.md-default-theme, md-select.md-search-loc .md-select-value {
+    border-bottom-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 1);
+}
+md-select.md-default-theme:not([disabled]):focus, md-select.md-search-loc:not([disabled]):focus .md-select-value {
+    border-bottom-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 1);
+}
+
+.md-select-value .md-select-icon {
+    margin-right: 4px;
+    margin-left: 0px;
+}
+
+md-autocomplete {
+  width: 450px;
+}
+
+md-autocomplete input:not(.md-input) {
+    font-size: 19px;
+/*    line-height: 40px;
+    height: 40px;*/
+}
 
 /* @if ENV='dev' */
 /* @endif */

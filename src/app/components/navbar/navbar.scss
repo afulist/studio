@@ -1,3 +1,4 @@
+/* NavTop Button */
 .menuBtn {
   height: 38px;
   min-width: 88px;
@@ -32,6 +33,7 @@
   vertical-align: middle;
 }
 
+/* search component: select function */
 .search-select {
   margin-left: 35px;
   padding-left: 3px;
@@ -41,12 +43,7 @@
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   font-size: 19px;
-  background-color: white;
-}
-
-.search-autocomplete {
-  margin-left: -22px;
-  padding: 20px;
+  background-color: rgb(250,250,250);
 }
 
 md-select.md-default-theme, md-select.md-search-loc .md-select-value {
@@ -63,6 +60,12 @@ md-select.md-default-theme:not([disabled]):focus, md-select.md-search-loc:not([d
     margin-left: 0px;
 }
 
+/* search component: autocomplete function */
+.search-autocomplete {
+  margin-left: -22px;
+  padding: 20px;
+}
+
 md-autocomplete {
   width: 450px;
 }
@@ -72,6 +75,11 @@ md-autocomplete input:not(.md-input) {
 /*    line-height: 40px;
     height: 40px;*/
 }
+
+.highlight {
+  color: #4527A0 !important;
+}
+
 
 /* @if ENV='dev' */
 /* @endif */

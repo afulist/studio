@@ -19,24 +19,22 @@
     <form ng-submit="dvm.search()" class="search-autocomplete">
       <md-autocomplete
           width="250px"
-          ng-disabled="dvm.isDisabled"
-          md-no-cache="dvm.noCache"
-          md-selected-item="dvm.selectedItem"
-          md-search-text-change="dvm.searchTextChange(dvm.searchText)"
-          md-search-text="dvm.searchText"
-          md-selected-item-change="dvm.selectedItemChange(item)"
-          md-items="item in dvm.querySearch(dvm.searchText)"
-          md-item-text="item.display"
+          placeholder="行程名稱、城市的關鍵字"
           md-min-length="0"
-          placeholder="行程名稱、城市的關鍵字">
+          md-autoselect="true"
+          md-search-text="dvm.searchText"
+          md-selected-item="dvm.selectedItem"
+          md-selected-item-change="dvm.selectedItemChange(item)"
+          md-items="item in dvm.querySuggsetion(dvm.searchText)"
+          md-item-text="item.display">
         <md-item-template>
-          <span md-highlight-text="dvm.searchText" md-highlight-flags="^i">{{item.display}}</span>
+          <span ng-if="item.type==='currentText'" tabIndex="-1"  style="font-size: 19px;">
+            <md-icon >search</md-icon>
+            搜尋{{dvm.selectedLoc.name}}地區: <span md-highlight-text="dvm.searchText" md-highlight-flags="^i">{{dvm.searchText}}</span>
+          </span>
+          <span ng-if="item.type!=='currentText'" md-highlight-text="dvm.searchText" md-highlight-flags="^i" style="font-size:19px;">{{item.display}}
+          </span>
         </md-item-template>
-        <md-not-found>
-          <div tabIndex="-1" ng-click="dvm.search()" style="font-size: 17px;">
-            搜尋{{dvm.selectedLoc.name}}地區: <strong>{{dvm.searchText}}</strong>
-          </div>
-        </md-not-found>
       </md-autocomplete>
     </form>
 

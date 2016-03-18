@@ -1,1 +1,34 @@
-<div>desktop sideNav L</div>
+<md-list class="listdemoListControls loc-list">
+
+  <md-list-item ng-repeat="loc in homeLeft.locations" ng-click="test()" class="loc-list-item">
+    <p class="loc-list-item-text">{{ loc.name }}</p>
+    <!-- <md-icon >create</md-icon> -->
+  </md-list-item>
+
+  <md-divider></md-divider>
+  <md-list-item ng-repeat="loc in homeLeft.locations" ng-click="test()" class="loc-list-item">
+    <p class="loc-list-item-text">{{ loc.name }}</p>
+    <!-- TODO-?:test overlap --><md-icon ></md-icon>
+    <md-icon ng-click="test()" class="md-secondary" aria-label="location">create</md-icon>
+  </md-list-item>
+
+  <md-divider></md-divider>
+  <md-list-item ng-repeat="loc in homeLeft.locations" ng-click="test()" class="loc-list-item">
+    <p class="loc-list-item-text">{{ loc.name }}</p>
+	<!-- TODO-ui: test overlap --><md-icon ></md-icon>
+	<!-- TODO-ui: test Item Menu -->
+	<md-menu>
+	  <md-button aria-label="edit" class="md-secondary-container md-icon-button" ng-click="$mdOpenMenu($event)">
+	  	<md-icon md-menu-origin aria-label="location" tabindex="-1">create</md-icon>
+	  </md-button>
+	  <md-menu-content width="2">
+	    <md-menu-item ng-repeat="item in [1, 2, 3]">
+	      <md-button ng-click="test($index)">
+	      	<span md-menu-align-target>Option</span> {{item}}
+	      </md-button>
+	    </md-menu-item>
+	  </md-menu-content>
+	</md-menu>
+  </md-list-item>
+
+</md-list>

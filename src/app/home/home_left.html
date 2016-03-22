@@ -12,13 +12,11 @@
 	<!-- edit menu -->
 	<!-- TODO-ui: test autoselect -->
 	<md-menu ng-click="" class="md-secondary">
-	  <md-button aria-label="edit" class="md-icon-button" ng-click="$mdOpenMenu($event)" style="margin:0px;" md-no-ink>
-	  	<md-icon md-menu-origin aria-label="location" tabindex="-1">create</md-icon>
-	  </md-button>
+	  <md-icon md-menu-origin aria-label="location" tabindex="-1" ng-click="$mdOpenMenu($event)">create</md-icon>
 	  <md-menu-content width="2">
 	    <md-menu-item ng-repeat="item in [1, 2, 3, 4]">
 	      <md-button ng-click="test($index)" class="list-menu-item">
-	      	<span md-menu-align-target class="list-menu-item-text">1Option {{item}} </span>
+	      	<span md-menu-align-target class="list-menu-item-text">Option {{item}} </span>
 	      </md-button>
 	    </md-menu-item>
 	  </md-menu-content>

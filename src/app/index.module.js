@@ -5,7 +5,7 @@
     .module('travel', [
 		'ngAnimate',
 		'ngCookies',
-		'ngTouch',
+		//'ngTouch', // Angular Material already has mobile support...
 		'ngSanitize',
 		'ngMessages',
 		'ngAria',

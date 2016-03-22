@@ -8,9 +8,9 @@
     <md-whiteframe class="md-whiteframe-2dp search-select" layout layout-align="center center">
       <md-input-container>
         <label>&nbsp;</label>
-        <md-select class="md-search-loc" ng-model="dvm.selectedLoc"aria-label="search-loc" ng-model-options="{trackBy: '$value.id'}" placeholder="搜尋地區">
+        <md-select class="md-search-loc" ng-model="dvm.selectedLoc" aria-label="search-loc" ng-model-options="{trackBy: '$value.id'}" placeholder="搜尋地區">
           <md-option ng-value="{{loc}}" ng-repeat="loc in dvm.locations">
-            {{loc.name}}
+            <span>{{loc.name}}</span>
           </md-option>
         </md-select>
       </md-input-container>

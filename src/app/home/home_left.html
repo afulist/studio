@@ -1,4 +1,4 @@
-<md-list class="listdemoListControls loc-list">
+<md-list class="loc-list">
 
   <md-list-item ng-repeat="loc in homeLeft.locations" ng-click="test()" class="loc-list-item">
     <p class="loc-list-item-text">{{ loc.name }}</p>
@@ -10,14 +10,15 @@
 	<!-- offset -->
 	<md-icon ></md-icon>
 	<!-- edit menu -->
+	<!-- TODO-ui: test autoselect -->
 	<md-menu ng-click="" class="md-secondary">
-	  <md-button aria-label="edit" class="md-icon-button" ng-click="$mdOpenMenu($event)" style="margin: 0px;" md-no-ink>
+	  <md-button aria-label="edit" class="md-icon-button" ng-click="$mdOpenMenu($event)" style="margin:0px;" md-no-ink>
 	  	<md-icon md-menu-origin aria-label="location" tabindex="-1">create</md-icon>
 	  </md-button>
 	  <md-menu-content width="2">
-	    <md-menu-item ng-repeat="item in [1, 2]">
-	      <md-button ng-click="test($index)">
-	      	<span md-menu-align-target>Option</span> {{item}}
+	    <md-menu-item ng-repeat="item in [1, 2, 3, 4]">
+	      <md-button ng-click="test($index)" class="list-menu-item">
+	      	<span md-menu-align-target class="list-menu-item-text">1Option {{item}} </span>
 	      </md-button>
 	    </md-menu-item>
 	  </md-menu-content>

@@ -60,6 +60,22 @@ md-select.md-default-theme:not([disabled]):focus, md-select.md-search-loc:not([d
     margin-left: 0px;
 }
 
+default-theme, md-select-menu md-option {
+    color: rgb(63, 81, 181);
+}
+
+default-theme, md-select-menu md-option:hover {
+    background-color: rgba(63, 81, 181, 0.2) !important;
+}
+
+default-theme, md-select-menu md-option .md-text {
+    color: rgba(0, 0, 0, 0.87);
+}
+
+default-theme, md-select-menu md-option[selected]  .md-text {
+    color: rgb(63, 81, 181);
+}
+
 /* search component: autocomplete function */
 .search-autocomplete {
   margin-left: -22px;
@@ -80,6 +96,9 @@ md-autocomplete input:not(.md-input) {
   color: #4527A0 !important;
 }
 
+.md-autocomplete-suggestions-container.md-default-theme, .md-autocomplete-suggestions-container li:hover, .md-autocomplete-suggestions-container.md-default-theme, .md-autocomplete-suggestions-container li.selected {
+    background: rgba(63, 81, 181, 0.2) !important;
+}
 
 /* @if ENV='dev' */
 /* @endif */

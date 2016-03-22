@@ -8,10 +8,6 @@
 	color: rgb(63, 81, 181);
 }
 
-md-list.md-default-theme, md-list md-list-item button.md-button:not([disabled]):hover {
-    background-color: rgba(63, 81, 181, 0.2);
-}
-
 .loc-list-item-text {
 	display: inline-block;
 	text-overflow: ellipsis;
@@ -22,21 +18,28 @@ md-list.md-default-theme, md-list md-list-item button.md-button:not([disabled]):
 	color: black;
 }
 
-md-list-item button.md-button.md-secondary-container, md-list-item .md-list-item-inner button.md-button.md-secondary-container {
-    /*margin-right: -10px;*/
-    margin-top: -3px;
+md-list.md-default-theme, md-list md-list-item button.md-button:not([disabled]):hover {
+    background-color: rgba(63, 81, 181, 0.2);
 }
 
+md-list-item.md-no-proxy.md-button, md-list-item .md-no-style.md-button {
+	border-radius: 3px;
+}
+
+
+/*TODO-ui: move to folder page*/
+/*editor*/
 .list-menu-item {
 	color: rgb(63, 81, 181);
 }
 
 .list-menu-item-text {
 	color: black;
+	font-size: 16px;
 }
 
-md-list-item.md-no-proxy.md-button, md-list-item .md-no-style.md-button {
-	border-radius: 3px;
+md-list-item button.md-button.md-secondary-container, md-list-item .md-list-item-inner button.md-button.md-secondary-container {
+    margin-top: -3px;
 }
 
 a.md-button.md-default-theme:not([disabled]):hover, a.md-button:not([disabled]):hover, .md-button.md-default-theme:not([disabled]):hover, .md-button:not([disabled]):hover {

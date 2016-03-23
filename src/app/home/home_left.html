@@ -9,8 +9,6 @@
   <!-- folder list -->
   <md-list-item ng-repeat="loc in homeLeft.locations" ng-click="test()" class="loc-list-item">
     <p class="loc-list-item-text">{{ loc.name }}</p>
-	<!-- offset -->
-	<md-icon ></md-icon>
 	<!-- editor menu -->
 	<md-menu ng-click="" class="md-secondary">
 	  <md-icon md-menu-origin aria-label="location" tabindex="-1" ng-click="$mdOpenMenu($event)">create</md-icon>
@@ -29,7 +27,6 @@
   <!-- test folder list -->
   <md-list-item ng-repeat="loc in homeLeft.locations" ng-click="test()" class="loc-list-item">
     <p class="loc-list-item-text">{{ loc.name }}</p>
-    <md-icon ></md-icon>
     <md-icon ng-click="test()" class="md-secondary" aria-label="location">create</md-icon>
   </md-list-item>
 

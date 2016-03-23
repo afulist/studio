@@ -1,5 +1,5 @@
-<div class="smooth-touch" id="side">
-  <md-content flex="" layout-padding="" >
+<div class="smooth-touch">
+  <md-content flex="" layout-padding="">
 
     <md-list class="loc-list" style="padding:2px;">
 
@@ -12,8 +12,6 @@
       <!-- folder list -->
       <md-list-item ng-repeat="loc in homeLeftM.locations" ng-click="test()" class="loc-list-item">
         <p class="loc-list-item-text">{{ loc.name }}</p>
-        <!-- offset -->
-        <md-icon ></md-icon>
         <!-- editor menu -->
         <md-menu ng-click="" class="md-secondary">
           <md-icon md-menu-origin aria-label="location" tabindex="-1" ng-click="$mdOpenMenu($event)">create</md-icon>
@@ -32,13 +30,11 @@
       <!-- test folder list -->
       <md-list-item ng-repeat="loc in homeLeftM.locations" ng-click="test()" class="loc-list-item">
         <p class="loc-list-item-text">{{ loc.name }}</p>
-        <md-icon ></md-icon>
         <md-icon ng-click="test()" class="md-secondary" aria-label="location">create</md-icon>
       </md-list-item>
 
     </md-list>
 
-    <br><br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br><br>
 
   </md-content>

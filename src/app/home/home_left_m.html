@@ -1,7 +1,7 @@
 <div class="smooth-touch">
   <md-content flex="" layout-padding="">
 
-    <md-list class="loc-list" style="padding:2px;">
+    <md-list class="loc-list" style="padding:2px;padding-right:3px;">
 
       <!-- regular location list -->
       <md-list-item ng-repeat="loc in homeLeftM.locations" ng-click="test()" class="loc-list-item">
@@ -13,8 +13,12 @@
       <md-list-item ng-repeat="loc in homeLeftM.locations" ng-click="test()" class="loc-list-item">
         <p class="loc-list-item-text">{{ loc.name }}</p>
         <!-- editor menu -->
-        <md-menu ng-click="" class="md-secondary">
-          <md-icon md-menu-origin aria-label="location" tabindex="-1" ng-click="$mdOpenMenu($event)">create</md-icon>
+        <md-menu ng-click="" class="md-secondary" aria-label="location">
+          <!-- use svg because of md-icon bug in mobile -->
+          <svg md-menu-origin tabindex="-1" ng-click="$mdOpenMenu($event)" fill="#000000" height="24" viewBox="0 0 24 24" width="24" fill="#000000" fill-opacity="0.54" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
           <!-- menu item -->
           <md-menu-content width="2">
             <md-menu-item ng-repeat="item in ['編輯', '刪除']">
@@ -27,10 +31,25 @@
       </md-list-item>
 
       <md-divider></md-divider>
-      <!-- test folder list -->
+      <!-- folder list -->
       <md-list-item ng-repeat="loc in homeLeftM.locations" ng-click="test()" class="loc-list-item">
         <p class="loc-list-item-text">{{ loc.name }}</p>
-        <md-icon ng-click="test()" class="md-secondary" aria-label="location">create</md-icon>
+        <!-- editor menu -->
+        <md-menu ng-click="" class="md-secondary" aria-label="location">
+          <!-- use svg because of md-icon bug in mobile -->
+          <svg md-menu-origin tabindex="-1" ng-click="$mdOpenMenu($event)" fill="#000000" height="24" viewBox="0 0 24 24" width="24" fill="#000000" fill-opacity="0.54" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+          <!-- menu item -->
+          <md-menu-content width="2">
+            <md-menu-item ng-repeat="item in ['編輯', '刪除']">
+              <md-button ng-click="test($index)" class="list-menu-item">
+                <span md-menu-align-target class="list-menu-item-text"> {{item}} </span>
+              </md-button>
+            </md-menu-item>
+          </md-menu-content>
+        </md-menu>
       </md-list-item>
 
     </md-list>

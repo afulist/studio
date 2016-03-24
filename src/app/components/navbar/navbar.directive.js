@@ -74,15 +74,19 @@
 
       // check Sidenav then show BottomSheet
       function showTopNavBottomSheet() {
+        vm.lockClick = true;
         if ($mdSidenav('right').isOpen()) {
           $mdSidenav('right').close().then(function(){
+             vm.lockClick = false;
              bottomSheet();
           });
         } else if($mdSidenav('left').isOpen()) {
           $mdSidenav('left').close().then(function(){
+             vm.lockClick = false;
              bottomSheet();
           });
         } else {
+          vm.lockClick = false;
           bottomSheet();
         }
       }

@@ -1035,6 +1035,7 @@ md-checkbox {
       direction: ltr;
       unicode-bidi: bidi-override; }
 
+/* CUSTOM: 2x in transition */
 md-bottom-sheet {
   position: absolute;
   left: 0;
@@ -3932,6 +3933,7 @@ md-optgroup {
   md-select-menu {
     border: 1px solid #fff; } }
 
+/* CUSTOM: 2x in transition */
 md-sidenav {
   box-sizing: border-box;
   position: absolute;

@@ -12,7 +12,8 @@
 		'ui.router',
 		'ngMaterial',
 		'toastr',
-		'firebase'
+		'firebase',
+		'ng-fastclick'
 	]);
 
 })();

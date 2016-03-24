@@ -57,11 +57,11 @@ html {
 }
 
 /* fix ripple slow performance in mobile */
-@media screen and (max-width: 959px) {
+/*@media screen and (max-width: 959px) {
   .md-ripple-container, .md-ripple-placed {
     transition: none !important;
   }
-}
+}*/
 
 /* @if ENV='dev' */
 /* @endif */

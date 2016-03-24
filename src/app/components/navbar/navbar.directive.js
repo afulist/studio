@@ -25,6 +25,7 @@
       var vm = this;
 
       // ==view data==
+      vm.lockClick = false;
       vm.selectedLoc = { id: 2, name: '台灣' };
       vm.locations = [
         { id: 2, name: '台灣' },
@@ -44,13 +45,18 @@
       // ==all func==
       // open or close Sidenav exclusive
       function toggleSidenav(menuId) {
+        vm.lockClick = true;
         if (menuId === 'left') {
           $mdSidenav('right').close().then(function(){
-             $mdSidenav(menuId).toggle();
+             $mdSidenav(menuId).toggle().then(function(){
+              vm.lockClick = false;
+             });
           });
         } else {
           $mdSidenav('left').close().then(function(){
-             $mdSidenav(menuId).toggle();
+             $mdSidenav(menuId).toggle().then(function(){
+              vm.lockClick = false;
+             });
           });
         }
       }

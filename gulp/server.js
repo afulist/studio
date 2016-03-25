@@ -45,7 +45,7 @@ function browserSyncInit(baseDir, browser) {
       styles: {
           top: 'auto',
           bottom: '0',
-          right: 'auto'
+          right: 'auto',
           left: '0'
       }
     }

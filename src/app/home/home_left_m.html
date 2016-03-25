@@ -4,13 +4,13 @@
     <md-list class="loc-list" style="padding:2px;padding-right:3px;">
 
       <!-- regular location list -->
-      <md-list-item ng-repeat="loc in homeLeftM.locations" ng-click="test()" class="loc-list-item">
+      <md-list-item ng-repeat="loc in homeLeftM.locations" ng-click="homeLeftM.closeSidenav('left')" class="loc-list-item">
         <p class="loc-list-item-text">{{ loc.name }}</p>
       </md-list-item>
 
       <md-divider></md-divider>
       <!-- folder list -->
-      <md-list-item ng-repeat="loc in homeLeftM.locations" ng-click="test()" class="loc-list-item">
+      <md-list-item ng-repeat="loc in homeLeftM.locations" ng-click="homeLeftM.closeSidenav('left')" class="loc-list-item">
         <p class="loc-list-item-text">{{ loc.name }}</p>
         <!-- editor menu -->
         <md-menu ng-click="" class="md-secondary" aria-label="location">
@@ -32,7 +32,7 @@
 
       <md-divider></md-divider>
       <!-- folder list -->
-      <md-list-item ng-repeat="loc in homeLeftM.locations" ng-click="test()" class="loc-list-item">
+      <md-list-item ng-repeat="loc in homeLeftM.locations" ng-click="homeLeftM.closeSidenav('left')" class="loc-list-item">
         <p class="loc-list-item-text">{{ loc.name }}</p>
         <!-- editor menu -->
         <md-menu ng-click="" class="md-secondary" aria-label="location">

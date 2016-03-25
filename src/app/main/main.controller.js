@@ -13,7 +13,6 @@
     //vm.relativeDate = moment(1453453611143).fromNow();
 
     // ==view func==
-    vm.toggleSide = toggleSide;
     //vm.fire = fire;
 
     // ==init func==
@@ -24,11 +23,6 @@
     function init() {
       // test toastr
       //toastr.success('page load');
-    }
-
-    // Hide or Show sideNav area
-    function toggleSide(sideNavId) {
-      $mdSidenav(sideNavId).toggle();
     }
 
     // TODO-fb: test firebase

@@ -43,7 +43,7 @@
       vm.selectedItemChange = selectedItemChange;
 
       // ==all func==
-      // open or close Sidenav exclusive
+      // open or close Sidenav exclusive with click locking
       function toggleSidenav(menuId) {
         vm.lockClick = true;
         if (menuId === 'left') {

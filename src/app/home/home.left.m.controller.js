@@ -6,7 +6,7 @@
     .controller('HomeLeftMCenterController', HomeLeftMCenterController);
 
   /** @ngInject */
-  function HomeLeftMCenterController($log) {
+  function HomeLeftMCenterController($log, $mdSidenav) {
     var vm = this;
 
     // ==view data==
@@ -18,6 +18,7 @@
 
     // ==view func==
     vm.init = init;
+    vm.closeSidenav = closeSidenav;
 
     // ==init func==
     init();
@@ -26,6 +27,11 @@
     // init
     function init() {
       $log.debug('load controller');
+    }
+
+    // close Sidenav without click locking
+    function closeSidenav(menuId) {
+      $mdSidenav(menuId).close();
     }
 
   }

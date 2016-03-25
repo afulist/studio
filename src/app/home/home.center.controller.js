@@ -10,7 +10,8 @@
     var vm = this;
 
     // ==view data==
-    vm.relativeDate = moment(1453453611143).fromNow();
+    var url = 'https://material.angularjs.org/1.0.6/img/list/60.jpeg';
+    vm.userImage = {'background-image':'url('+ url +')'};
 
     // ==view func==
     vm.init = init;
@@ -21,8 +22,9 @@
     // ==all func==
     // init
     function init() {
-      $log.debug('load controller');
+
     }
+
 
   }
 })();

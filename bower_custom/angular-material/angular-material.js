@@ -17527,6 +17527,8 @@ function MdTooltipDirective($timeout, $window, $$rAF, $document, $mdUtil, $mdThe
     function showTooltip() {
       // Insert the element before positioning it, so we can get the position
       // and check if we should display it
+      // CUSTOM: fix set initial position of tooltip
+      element.css({top: 0, left: 0});
       tooltipParent.append(element);
 
       // Check if we should display it or not.

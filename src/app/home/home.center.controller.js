@@ -6,7 +6,7 @@
     .controller('HomeCenterController', HomeCenterController);
 
   /** @ngInject */
-  function HomeCenterController($log, moment) {
+  function HomeCenterController() {
     var vm = this;
 
     // ==view data==

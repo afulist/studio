@@ -6,8 +6,8 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($log, $mdSidenav) {
-    var vm = this;
+  function MainController() {
+    // var vm = this;
 
     // ==view data==
     //vm.relativeDate = moment(1453453611143).fromNow();

@@ -44,16 +44,20 @@
   font-feature-settings: 'liga';
 }
 
-html {
-  /*font-family: 'Roboto Slab', serif;*/
-}
-
 .smooth-touch {
   width: 100%;
   height: 100vh;
   float: left;
   overflow-y: scroll; /* has to be scroll, not auto */
   -webkit-overflow-scrolling: touch;
+}
+
+html {
+  /*font-family: 'Roboto Slab', serif;*/
+}
+
+.all-bg {
+  background-color: #F1F1F1;
 }
 
 .primary-btn {

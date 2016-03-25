@@ -1,9 +1,10 @@
-/*location list and item */
+/* location list */
 .loc-list {
 	padding-right: 20px;
 	padding-top: 2px;
 }
 
+/* location item */
 .loc-list-item {
 	color: rgb(63, 81, 181);
 }
@@ -27,22 +28,12 @@ md-list-item.md-no-proxy.md-button, md-list-item .md-no-style.md-button {
 	border-radius: 3px;
 }
 
-
-/*TODO-ui: move to folder page*/
-/*editor*/
-.list-menu-item {
-	color: rgb(63, 81, 181);
-}
-
-.list-menu-item-text {
-	color: black;
-	font-size: 16px;
-}
-
+/* item editor icon */
 md-list-item button.md-button.md-secondary-container, md-list-item .md-list-item-inner button.md-button.md-secondary-container {
     margin-top: -2px; /*-2 for mobile, -3 for desktop*/
 }
 
+/* item editor item */
 a.md-button.md-default-theme:not([disabled]):hover, a.md-button:not([disabled]):hover, .md-button.md-default-theme:not([disabled]):hover, .md-button:not([disabled]):hover {
     background-color: rgba(63, 81, 181, 0.2);
 }

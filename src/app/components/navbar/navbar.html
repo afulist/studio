@@ -30,7 +30,7 @@
         <md-item-template>
           <span ng-if="item.type==='currentText'" tabIndex="-1"  style="font-size: 19px;">
             <md-icon >search</md-icon>
-            搜尋{{dvm.selectedLoc.name}}地區: <span md-highlight-text="dvm.searchText" md-highlight-flags="^i">{{dvm.searchText}}</span>
+            {{dvm.selectedLoc.name}}地區: <span md-highlight-text="dvm.searchText" md-highlight-flags="^i">{{dvm.searchText}}</span>
           </span>
           <span ng-if="item.type!=='currentText'" md-highlight-text="dvm.searchText" md-highlight-flags="^i" style="font-size:19px;">{{item.display}}
           </span>
@@ -39,17 +39,21 @@
     </form>
 
     <span flex=""></span>
-    <md-button class="md-raised menuBtn" style="color: black;">
-      我的規劃
+    <md-button class="md-raised menuBtn">
+      <md-icon class="menuBtn-icon">assignment_turned_in</md-icon>
+      <span>我的規劃&nbsp;</span>
     </md-button>
-    <md-button class="md-raised menuBtn" style="color: black;">
-      我的收藏
+    <md-button class="md-raised menuBtn">
+      <md-icon class="menuBtn-icon">favorite</md-icon>
+      <span>我的收藏&nbsp;</span>
     </md-button>
-    <md-button class="md-raised menuBtn" style="color: black;">
-      更多
+    <md-button class="md-raised menuBtn">
+      <md-icon class="menuBtn-icon">more_vert</md-icon>
+      <span>更多</span>
     </md-button>
-    <md-button class="md-raised md-hue-1 md-accent menuBtn" style="color: black;">
-      登入
+    <md-button class="md-raised md-hue-1 md-accent menuBtn">
+      <md-icon class="menuBtn-icon">face</md-icon>
+      <span>登入</span>
     </md-button>
   </div>
 </md-toolbar>

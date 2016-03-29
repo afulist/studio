@@ -2,8 +2,12 @@
 .menuBtn {
   height: 38px;
   min-width: 88px;
-  width: 105px;
+  /*width: 105px;*/ /*auto size*/
   font-size: 19px;
+}
+
+.menuBtn-icon {
+  margin-top: -2px;
 }
 
 .menuBtn-m {
@@ -83,7 +87,7 @@ default-theme, md-select-menu md-option[selected]  .md-text {
 }
 
 md-autocomplete {
-  width: 450px;
+  width: 400px;
 }
 
 md-autocomplete input:not(.md-input) {

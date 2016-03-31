@@ -38,6 +38,23 @@ a.md-button.md-default-theme:not([disabled]):hover, a.md-button:not([disabled]):
     background-color: rgba(63, 81, 181, 0.2);
 }
 
+/* plans desc */
+.plans-desc {
+	font-size: 21px;
+	margin-left: 10px;
+	margin-bottom: 7px;
+	margin-top: 3px;
+}
+
+.sort-container {
+	float: right;
+	font-size: 17px;
+	padding: 0px;
+	margin: 0px 0;
+	margin-top: -3px;
+	margin-right: 13px;
+}
+
 /* card */
 .card-title {
 	padding-bottom: 0px;

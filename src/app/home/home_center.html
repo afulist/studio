@@ -1,5 +1,16 @@
 <div flex-xs="" flex-gt-xs="100" layout="column">
-
+  <div class="plans-desc">
+    <strong>台灣的行程</strong>
+    <md-input-container class="sort-container">
+      <label>&nbsp;</label>
+      <md-select ng-model="homeCenter.selectedSort" aria-label="plan sort" ng-model-options="{trackBy: '$value.id'}" placeholder="搜尋地區">
+        <md-option ng-value="{{sort}}" ng-repeat="sort in homeCenter.plansSort">
+          <span>{{sort.name}}</span>
+        </md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+  <!-- plans -->
   <md-card>
     <md-card-title class="card-title">
       <md-card-title-text>

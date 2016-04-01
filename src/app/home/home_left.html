@@ -1,7 +1,7 @@
 <md-list class="loc-list">
 
   <!-- regular location list -->
-  <md-list-item ng-repeat="loc in homeLeft.locations" ng-click="test()" class="loc-list-item">
+  <md-list-item ng-repeat="loc in homeLeft.locations" ng-click="homeLeft.selectLoc(loc)" class="loc-list-item">
     <p class="loc-list-item-text">{{ loc.name }}</p>
   </md-list-item>
 

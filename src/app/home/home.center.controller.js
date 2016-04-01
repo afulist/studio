@@ -6,7 +6,7 @@
     .controller('HomeCenterController', HomeCenterController);
 
   /** @ngInject */
-  function HomeCenterController() {
+  function HomeCenterController($log, $rootScope, $scope) {
     var vm = this;
 
     // ==view data==
@@ -21,9 +21,9 @@
       //{ id: 1, name: '最多留言最前'}
     ];
     vm.selectedSort = { id: 1, name: '最新在最前'};
+    vm.loc = '台灣灣灣灣灣灣灣';
 
     // ==view func==
-    vm.init = init;
 
     // ==init func==
     init();
@@ -31,7 +31,11 @@
     // ==all func==
     // init
     function init() {
-
+      // TODO-load: on event to load plans
+      var loadPlans = $rootScope.$on('selectLoc', function(event, args) {
+        vm.loc = args.loc.name;
+      });
+      $scope.$on('$destroy', loadPlans);
     }
 
 

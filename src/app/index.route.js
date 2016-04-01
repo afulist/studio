@@ -22,7 +22,7 @@
         views: {
             'leftM@main': {
                 templateUrl: 'app/home/home_left_m.html',
-                controller: 'HomeLeftMCenterController',
+                controller: 'HomeLeftController',
                 controllerAs: 'homeLeftM'
             },
             'left@main': {
@@ -37,12 +37,12 @@
             },
             'right@main': {
                 templateUrl: 'app/home/home_right.html',
-                controller: 'HomeRightCenterController',
+                controller: 'HomeRightController',
                 controllerAs: 'homeRight'
             },
             'rightM@main': {
                 templateUrl: 'app/home/home_right_m.html',
-                controller: 'HomeRightMCenterController',
+                controller: 'HomeRightController',
                 controllerAs: 'homeRightM'
             }
         }

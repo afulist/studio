@@ -3,17 +3,16 @@
 
   angular
     .module('travel')
-    .controller('HomeRightCenterController', HomeRightCenterController);
+    .controller('HomeRightController', HomeRightController);
 
   /** @ngInject */
-  function HomeRightCenterController($log) {
+  function HomeRightController($log, moment) {
     var vm = this;
 
     // ==view data==
-    //vm.relativeDate = moment(1453453611143).fromNow();
+    vm.relativeDate = moment(1453453611143).fromNow();
 
     // ==view func==
-    vm.init = init;
 
     // ==init func==
     init();
@@ -21,7 +20,7 @@
     // ==all func==
     // init
     function init() {
-      $log.debug('load controller');
+      $log.debug('load HomeRightController');
     }
 
   }

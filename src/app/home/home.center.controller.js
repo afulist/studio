@@ -21,7 +21,7 @@
       //{ id: 1, name: '最多留言最前'}
     ];
     vm.selectedSort = { id: 1, name: '最新在最前'};
-    vm.loc = '台灣灣灣灣灣灣灣';
+    vm.loc = '最新';
 
     // ==view func==
 

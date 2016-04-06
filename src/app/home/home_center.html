@@ -1,7 +1,8 @@
 <div flex-xs="" flex-gt-xs="100" layout="column">
+  <!-- desc -->
   <div class="plans-desc">
-    <span hide-sm hide-xs class="plans-desc-loc">共1888個{{homeCenter.loc}}行程</span>
-    <md-input-container hide-sm hide-xs class="sort-container">
+    <span hide-xs class="plans-desc-loc">{{homeCenter.loc}}的行程，共34個</span>
+    <md-input-container hide-xs class="sort-container">
       <label>&nbsp;</label>
       <md-select ng-model="homeCenter.selectedSort" aria-label="plan sort" ng-model-options="{trackBy: '$value.id'}" placeholder="搜尋地區">
         <md-option ng-value="{{sort}}" ng-repeat="sort in homeCenter.plansSort">
@@ -9,8 +10,8 @@
         </md-option>
       </md-select>
     </md-input-container>
-    <span hide-gt-md hide-md class="plans-desc-loc-m">共1888個{{homeCenter.loc}}行程</span>
-    <md-input-container hide-gt-md hide-md class="sort-container-m">
+    <div hide-gt-sm hide-sm class="plans-desc-loc-m">{{homeCenter.loc}}的行程，共2222個</div>
+    <md-input-container hide-gt-sm hide-sm class="sort-container-m">
       <label>&nbsp;</label>
       <md-select ng-model="homeCenter.selectedSort" aria-label="plan sort" ng-model-options="{trackBy: '$value.id'}" placeholder="搜尋地區">
         <md-option ng-value="{{sort}}" ng-repeat="sort in homeCenter.plansSort">
@@ -19,6 +20,7 @@
       </md-select>
     </md-input-container>
   </div>
+
   <!-- plans -->
   <md-card>
     <md-card-title class="card-title">
@@ -31,11 +33,11 @@
           </a>
         </span>
         <span class="md-subhead">
-          2015/7/8<span hide-gt-md hide-md>&nbsp;由<a ui-sref="main.home">afulist</a></span>更新
+          2015/7/8<span hide-gt-sm hide-sm>&nbsp;由<a ui-sref="main.home">afulist</a></span>更新
         </span>
       </md-card-title-text>
       <md-card-title-media>
-        <md-button class="md-fab big-fab hide-sm hide-xs" aria-label="user page" ng-style="homeCenter.userImage">
+        <md-button class="md-fab big-fab hide-xs" aria-label="user page" ng-style="homeCenter.userImage">
           <md-tooltip style="">
             使用者
           </md-tooltip>
@@ -45,29 +47,29 @@
     </md-card-title>
     <md-card-actions layout="row" layout-align="end center">
       <!-- desktop action -->
-      <md-button hide-sm hide-xs class="primary-btn" title="讚">
+      <md-button hide-xs class="primary-btn" title="讚">
         <md-icon class="icon-in-btn">thumb_up</md-icon>
         <span class="primary-btn-text icon-count">77777111119</span>
       </md-button>
-      <md-button hide-sm hide-xs class="primary-btn" title="收藏">
+      <md-button hide-xs class="primary-btn" title="收藏">
         <md-icon >favorite</md-icon>
         <span class="primary-btn-text icon-count">999</span>
       </md-button>
       <!-- mobile action -->
-      <md-button hide-gt-md hide-md class="md-icon-button primary-btn" aria-label="thumb up">
+      <md-button hide-gt-sm hide-sm class="md-icon-button primary-btn" aria-label="thumb up">
         <!-- TODO-fastclick: check SVGElement.offsetHeight at April 2016 -->
         <svg fill-opacity="0.54" height="24" width="24">
            <use xlink:href="../assets/svg/icon_thumb.svg#thumb_up"></use>
         </svg>
       </md-button>
-      <span hide-gt-md hide-md class="icon-m-count-l">1234444</span>
-      <md-button hide-gt-md hide-md class="md-icon-button primary-btn" aria-label="favorite">
+      <span hide-gt-sm hide-sm class="icon-m-count-l">1234444</span>
+      <md-button hide-gt-sm hide-sm class="md-icon-button primary-btn" aria-label="favorite">
         <!-- TODO-fastclick: check SVGElement.offsetHeight at April 2016 -->
         <svg fill-opacity="0.54" height="24" width="24">
            <use xlink:href="../assets/svg/icon_favor.svg#favorite"></use>
         </svg>
       </md-button>
-      <span hide-gt-md hide-md class="icon-m-count-r">1234</span>
+      <span hide-gt-sm hide-sm class="icon-m-count-r">1234</span>
     </md-card-actions>
   </md-card>
 

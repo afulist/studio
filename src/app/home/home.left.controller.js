@@ -31,6 +31,9 @@
 
     // close Sidenav without click locking
     function selectLoc(loc, menuId) {
+      // scroll to top
+      document.getElementById('top').scrollIntoView(false); // eslint-disable-line
+      // close nav
       if(menuId) {
         $mdSidenav(menuId).close();
       }

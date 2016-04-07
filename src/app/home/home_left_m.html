@@ -28,9 +28,9 @@
       </md-list-item>
 
       <md-divider></md-divider>
-      <!-- folder list -->
+      <!-- mobile folder list -->
       <md-list-item ng-repeat="loc in homeLeftM.locations" ng-click="homeLeftM.closeSidenav('left')" class="loc-list-item">
-        <p class="loc-list-item-text">{{ loc.name }}</p>
+        <p class="folder-list-item-text" style="max-width: 160px;">{{ loc.name }}</p>
         <!-- editor menu -->
         <md-menu ng-click="" class="md-secondary" aria-label="location">
           <!-- use svg because of md-icon bug in mobile -->

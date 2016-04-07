@@ -21,11 +21,11 @@
 }
 
 md-list.md-default-theme, md-list md-list-item button.md-button:not([disabled]):hover {
-    background-color: rgba(63, 81, 181, 0.2);
+    /*background-color: rgba(63, 81, 181, 0.2) !important;*/
 }
 
-md-list-item.md-no-proxy.md-button, md-list-item .md-no-style.md-button {
-	border-radius: 3px;
+md-list-item.md-no-proxy.md-button, md-list-item ._md-no-style.md-button {
+	border-radius: 3px !important;
 }
 
 /* item editor icon */

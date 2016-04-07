@@ -14,11 +14,12 @@
       { locId: 0, name: '最新', img: 'img/100-0.jpeg', newMessage: true },
       { locId: 1, name: '台灣', img: 'img/100-0.jpeg', newMessage: true },
       { locId: 2, name: '日本', img: 'img/100-1.jpeg', newMessage: false },
-      { locId: 3, name: '韓國', img: 'img/100-2.jpeg', newMessage: false }
+      { locId: 3, name: '韓國國國國國國國國國國國國', img: 'img/100-2.jpeg', newMessage: false }
     ];
 
     // ==view func==
     vm.selectLoc = selectLoc;
+    vm.test = test;
 
     // ==init func==
     init();
@@ -39,6 +40,11 @@
       }
       // broadcast to load plans
       $rootScope.$broadcast('selectLoc', {loc: loc});
+    }
+
+    // test
+    function test() {
+      $log.debug('test');
     }
 
   }

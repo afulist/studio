@@ -6,6 +6,14 @@ md-sidenav.md-closed.md-locked-open-add-active {
     max-width: 1000px !important;
 }
 
+/* fix scroll to top */
+#content {
+	padding-top: 0px;
+}
+#top {
+	padding-top: 8px;
+}
+
 /* @if ENV='dev' */
 /* @endif */
 /* @if ENV='stage' */

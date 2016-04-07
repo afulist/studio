@@ -18,7 +18,7 @@
     // click nav item
     function listItemClick(item) {
       // scroll to top
-      document.getElementById('top').scrollIntoView(false); // eslint-disable-line
+      document.getElementById('top').scrollIntoView(true); // eslint-disable-line
       // close sheet
       $log.debug('listItemClick');
       $mdBottomSheet.hide(item);

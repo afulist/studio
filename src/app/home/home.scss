@@ -14,16 +14,27 @@
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
-	padding-right: 0px; /* for secondery space */
-	max-width: 200px;
+	padding-right: 5px; /* for secondery space */
+	/*max-width: 200px;*/
 	font-size: 19px;
 	color: black;
 }
 
+._md-list-item-inner { /* for folder-list-item-text */
+	margin-right: -65px; /* for secondery space */
+}
+
 .folder-list-item-text {
 	@extend .loc-list-item-text;
-	max-width: 122px;
+	padding-right: 65px; /* for secondery space */
 }
+
+.folder-list-item-text-m {
+	@extend .loc-list-item-text;
+	padding-right: 25px; /* for secondery space */
+}
+
+
 
 /*md-list.md-default-theme, md-list md-list-item button.md-button:not([disabled]):hover {
     background-color: rgba(63, 81, 181, 0.2) !important;

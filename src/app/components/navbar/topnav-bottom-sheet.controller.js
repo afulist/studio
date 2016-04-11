@@ -6,7 +6,7 @@
     .controller('TopNavBottomSheetController', TopNavBottomSheetCtrl);
 
   /** @ngInject */
-  function TopNavBottomSheetCtrl($log, $mdBottomSheet) {
+  function TopNavBottomSheetCtrl($log, $mdBottomSheet , $timeout) {
     var vm = this;
 
     // ==view data==
@@ -20,7 +20,10 @@
       // close sheet
       $log.debug('listItemClick');
       $mdBottomSheet.hide(item);
-      // scroll to top has bug here
+      // scroll to top has bug if no $timeout here
+      $timeout(function function_name(argument) { // eslint-disable-line
+        document.getElementById('top').scrollIntoView(true); // eslint-disable-line
+      }, 80);
     }
 
   }

@@ -1,9 +1,11 @@
 <!-- desktop -->
 <md-toolbar layout="row" hide-sm hide-xs>
   <div class="md-toolbar-tools">
-    <h1 layout-align-gt-sm="center">
-      {{ dvm.logo }}
-    </h1>
+    <a ui-sref="main.home">
+      <h1 layout-align-gt-sm="center">
+        {{ dvm.logo }}
+      </h1>
+    </a>
     <!-- search location selector -->
     <md-whiteframe class="md-whiteframe-2dp search-select" layout layout-align="center center">
       <md-input-container>
@@ -39,22 +41,30 @@
     </form>
 
     <span flex=""></span>
-    <md-button class="md-raised menuBtn">
-      <md-icon class="menuBtn-icon">assignment_turned_in</md-icon>
-      <span>我的規劃&nbsp;</span>
-    </md-button>
-    <md-button class="md-raised menuBtn">
-      <md-icon class="menuBtn-icon">favorite</md-icon>
-      <span>我的收藏&nbsp;</span>
-    </md-button>
-    <md-button class="md-raised menuBtn">
-      <md-icon class="menuBtn-icon">more_vert</md-icon>
-      <span>更多</span>
-    </md-button>
-    <md-button class="md-raised md-hue-1 md-accent menuBtn">
-      <md-icon class="menuBtn-icon">face</md-icon>
-      <span>登入</span>
-    </md-button>
+    <a ui-sref="main.myplan">
+      <md-button class="md-raised menuBtn">
+        <md-icon class="menuBtn-icon">assignment_turned_in</md-icon>
+        <span>我的規劃&nbsp;</span>
+      </md-button>
+    </a>
+    <a ui-sref="main.myfavor">
+      <md-button class="md-raised menuBtn">
+        <md-icon class="menuBtn-icon">favorite</md-icon>
+        <span>我的收藏&nbsp;</span>
+      </md-button>
+    </a>
+    <a ui-sref="main.myfavor">
+      <md-button class="md-raised menuBtn">
+        <md-icon class="menuBtn-icon">more_vert</md-icon>
+        <span>更多</span>
+      </md-button>
+    </a>
+    <a ui-sref="main.myfavor">
+      <md-button class="md-raised md-hue-1 md-accent menuBtn">
+        <md-icon class="menuBtn-icon">face</md-icon>
+        <span>登入</span>
+      </md-button>
+    </a>
   </div>
 </md-toolbar>
 

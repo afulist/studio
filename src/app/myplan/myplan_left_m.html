@@ -1,0 +1,57 @@
+<div class="smooth-touch">
+  <md-content class="all-bg" flex="" layout-padding="">
+
+    <md-list class="loc-list" style="padding:2px;padding-right:3px;">
+
+      <!-- regular location list -->
+      <md-list-item ng-repeat="loc in myplanLeftM.locations" ng-click="myplanLeftM.selectLoc(loc, 'left')" class="loc-list-item">
+        <p class="loc-list-item-text">{{ loc.name }}</p>
+      </md-list-item>
+
+
+      <md-divider></md-divider>
+      <!-- test folder list -->
+      <md-list-item ng-repeat="loc in myplanLeftM.locations" ng-click="myplanLeftM.test()" class="loc-list-item">
+        <p class="folder-list-item-text">{{ loc.name }}</p>
+        <!-- use svg because of md-icon bug in mobile -->
+        <!-- TODO-fastclick: check SVGElement.offsetHeight at April 2016 -->
+        <span tabindex="-1" class="md-secondary" ng-click="myplanLeftM.test()" aria-label="create">
+          <svg fill-opacity="0.54" height="24" width="24" aria-label="create" style="margin-top: 0px;">
+             <use xlink:href="../assets/svg/icon_create.svg#create"></use>
+          </svg>
+        </span>
+        <span tabindex="-1" class="md-secondary" ng-click="myplanLeftM.test()" aria-label="delete">
+          <svg fill-opacity="0.54" height="24" width="24" aria-label="create" style="margin-top: 0px;">
+             <use xlink:href="../assets/svg/icon_delete.svg#delete"></use>
+          </svg>
+        </span>
+      </md-list-item>
+
+      <md-divider></md-divider>
+      <!-- mobile folder list -->
+      <md-list-item ng-repeat="loc in myplanLeftM.locations" ng-click="myplanLeftM.closeSidenav('left')" class="loc-list-item">
+        <p class="folder-list-item-text-m">{{ loc.name }}</p>
+        <!-- editor menu -->
+        <md-menu ng-click="" class="md-secondary" aria-label="location">
+          <!-- use svg because of md-icon bug in mobile -->
+          <!-- TODO-fastclick: check SVGElement.offsetHeight at April 2016 -->
+          <svg md-menu-origin tabindex="-1" ng-click="$mdOpenMenu($event)" fill-opacity="0.54" height="24" width="24">
+             <use xlink:href="../assets/svg/icon_create.svg#create"></use>
+          </svg>
+          <!-- menu item -->
+          <md-menu-content width="2">
+            <md-menu-item ng-repeat="item in ['編輯', '刪除']">
+              <md-button ng-click="test($index)" class="primary-btn">
+                <span md-menu-align-target class="primary-btn-text"> {{item}} </span>
+              </md-button>
+            </md-menu-item>
+          </md-menu-content>
+        </md-menu>
+      </md-list-item>
+
+    </md-list>
+
+    <br><br><br><br><br><br><br><br><br><br><br>
+
+  </md-content>
+</div>

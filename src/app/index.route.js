@@ -47,6 +47,70 @@
             }
         }
       })
+
+      // my plan page
+      .state('main.myplan', {
+        url: '/myplan',
+        views: {
+            'leftM@main': {
+                templateUrl: 'app/myplan/myplan_left_m.html',
+                controller: 'MyplanLeftController',
+                controllerAs: 'myplanLeftM'
+            },
+            'left@main': {
+                templateUrl: 'app/myplan/myplan_left.html',
+                controller: 'MyplanLeftController',
+                controllerAs: 'myplanLeft'
+            },
+            'center@main': {
+                templateUrl: 'app/myplan/myplan_center.html',
+                controller: 'MyplanCenterController',
+                controllerAs: 'myplanCenter'
+            },
+            'right@main': {
+                templateUrl: 'app/myplan/myplan_right.html',
+                controller: 'MyplanRightController',
+                controllerAs: 'myplanRight'
+            },
+            'rightM@main': {
+                templateUrl: 'app/myplan/myplan_right_m.html',
+                controller: 'MyplanRightController',
+                controllerAs: 'myplanRightM'
+            }
+        }
+      })
+
+      // my favor plan page
+      .state('main.myfavor', {
+        url: '/myfavor',
+        views: {
+            'leftM@main': {
+                templateUrl: 'app/myfavor/myfavor_left_m.html',
+                controller: 'MyfavorLeftController',
+                controllerAs: 'myfavorLeftM'
+            },
+            'left@main': {
+                templateUrl: 'app/myfavor/myfavor_left.html',
+                controller: 'MyfavorLeftController',
+                controllerAs: 'myfavorLeft'
+            },
+            'center@main': {
+                templateUrl: 'app/myfavor/myfavor_center.html',
+                controller: 'MyfavorCenterController',
+                controllerAs: 'myfavorCenter'
+            },
+            'right@main': {
+                templateUrl: 'app/myfavor/myfavor_right.html',
+                controller: 'MyfavorRightController',
+                controllerAs: 'myfavorRight'
+            },
+            'rightM@main': {
+                templateUrl: 'app/myfavor/myfavor_right_m.html',
+                controller: 'MyfavorRightController',
+                controllerAs: 'myfavorRightM'
+            }
+        }
+      })
       ;
 
     $urlRouterProvider.otherwise('/home');

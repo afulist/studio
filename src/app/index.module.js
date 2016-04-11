@@ -13,7 +13,8 @@
 		'ngMaterial',
 		'toastr',
 		'firebase',
-		'ng-fastclick'
+		'ng-fastclick',
+		'ezfb'
 	]);
 
 })();

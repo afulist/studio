@@ -7,7 +7,7 @@
 
   /** @ngInject */
   // before run block: Provider Setting
-  function config($logProvider, $mdThemingProvider, toastrConfig) {
+  function config($logProvider, $mdThemingProvider, toastrConfig, ezfbProvider) {
     // ==Set options ==
     // console log config
     /* @if ENV='dev' */
@@ -55,6 +55,21 @@
       progressBar: false,
       preventOpenDuplicates: false,
       closeButton: true
+    });
+
+    // facebook config
+    ezfbProvider.setLocale('zh_TW');
+    ezfbProvider.setInitParams({
+      /* @if ENV='dev' */
+      appId: '1075558685821425',
+      /* @endif */
+      /* @if ENV='stage' **
+      appId: '1075559409154686',
+      /* @endif */
+      /* @if ENV='prod' **
+      appId: '1075557892488171',
+      /* @endif */
+      version: 'v2.5' // default is 'v2.4'
     });
 
   }

@@ -21,9 +21,9 @@
       $log.debug('listItemClick');
       $mdBottomSheet.hide(item);
       // scroll to top has bug if no $timeout here
-      $timeout(function function_name(argument) { // eslint-disable-line
-        document.getElementById('top').scrollIntoView(true); // eslint-disable-line
-      }, 150);
+      // $timeout(function function_name(argument) { // eslint-disable-line
+      //   document.getElementById('top').scrollIntoView(true); // eslint-disable-line
+      // }, 150);
     }
 
   }

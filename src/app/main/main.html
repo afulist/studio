@@ -4,15 +4,15 @@
 
 <!-- center -->
 <md-content layout="column" id="content" flex class="md-padding all-bg">
-  <div layout="row" id="top">
+  <div layout="row"><!-- id="top" -->
     <!-- desktop sideNav -->
-    <div flex="20" hide-sm hide-xs ui-view="left">
+    <div flex="20" hide-sm hide-xs ui-view="left" class="content-col">
     </div>
     <!-- desktop & mobile content -->
-    <div flex ui-view="center">
+    <div flex ui-view="center" autoscroll="true" class="content-col">
     </div>
     <!-- desktop sideNav -->
-    <div flex="25" hide-sm hide-xs ui-view="right">
+    <div flex="25" hide-sm hide-xs ui-view="right" class="content-col">
     </div>
   </div>
 </md-content>

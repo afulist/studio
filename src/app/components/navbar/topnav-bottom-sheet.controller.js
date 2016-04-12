@@ -6,7 +6,7 @@
     .controller('TopNavBottomSheetController', TopNavBottomSheetCtrl);
 
   /** @ngInject */
-  function TopNavBottomSheetCtrl($log, $mdBottomSheet , $timeout) {
+  function TopNavBottomSheetCtrl($log, $mdBottomSheet) {
     var vm = this;
 
     // ==view data==

@@ -54,7 +54,7 @@
         views: {
             'leftM@main': {
                 templateUrl: 'app/myplan/myplan_left_m.html',
-                controller: 'MyplanLeftController',
+                controller: 'MyplanLeftMController',
                 controllerAs: 'myplanLeftM'
             },
             'left@main': {
@@ -74,7 +74,7 @@
             },
             'rightM@main': {
                 templateUrl: 'app/myplan/myplan_right_m.html',
-                controller: 'MyplanRightController',
+                controller: 'MyplanRightMController',
                 controllerAs: 'myplanRightM'
             }
         }
@@ -86,7 +86,7 @@
         views: {
             'leftM@main': {
                 templateUrl: 'app/myfavor/myfavor_left_m.html',
-                controller: 'MyfavorLeftController',
+                controller: 'MyfavorLeftMController',
                 controllerAs: 'myfavorLeftM'
             },
             'left@main': {
@@ -106,7 +106,7 @@
             },
             'rightM@main': {
                 templateUrl: 'app/myfavor/myfavor_right_m.html',
-                controller: 'MyfavorRightController',
+                controller: 'MyfavorRightMController',
                 controllerAs: 'myfavorRightM'
             }
         }

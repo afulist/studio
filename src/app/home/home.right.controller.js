@@ -6,14 +6,13 @@
     .controller('HomeRightController', HomeRightController);
 
   /** @ngInject */
-  function HomeRightController($log, $scope, $mdSidenav, $state, $timeout) {
+  function HomeRightController($log, $scope, $state, $timeout) {
     var vm = this;
 
     // ==view data==
     vm.pluginOn = true;
 
     // ==view func==
-    vm.checkSide = checkSide;
 
     // ==init func==
     init();
@@ -32,17 +31,9 @@
         // restart stateChange
         $timeout(function() { // prevent infinite loading
            $state.go(toState.name, toParams); // TODO-state: test
-        }, 0);
+        }, 5);
       });
     }
-
-    // fix fb css bug in mobile
-    function checkSide() {
-      if ($mdSidenav('right').isOpen()) {
-        return true;
-      }
-    }
-
 
   }
 })();

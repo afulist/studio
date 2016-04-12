@@ -6,11 +6,11 @@
     .controller('HomeRightController', HomeRightController);
 
   /** @ngInject */
-  function HomeRightController($log, $scope, $state, $timeout) {
+  function HomeRightController($log, $scope, $state, $timeout, $mdMedia) {
     var vm = this;
 
     // ==view data==
-    vm.pluginOn = true;
+    vm.pluginOn = false;
 
     // ==view func==
 
@@ -21,9 +21,11 @@
     // init
     function init() {
       $log.debug('load HomeRightController');
-      // fix fb css bug
+      // fix fb css bug by closing fb page plugin in desktop
+      if ($mdMedia('gt-md') || $mdMedia('md')) {
+        vm.pluginOn = true;
+      }
       $scope.$on('$stateChangeStart', function (event, toState, toParams) {
-        // close fb page plugin in desktop
         if (vm.pluginOn) { // prevent infinite loading
           event.preventDefault(); // stop stateChange
           vm.pluginOn = false;

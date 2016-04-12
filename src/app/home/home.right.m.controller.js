@@ -23,7 +23,7 @@
       $log.debug('load HomeRightMController(m)');
     }
 
-    // fix fb css bug in mobile
+    // fix fb css bug by closing fb page plugin in mobile
     function checkSide() {
       if ($mdSidenav('right').isOpen()) {
         return true;

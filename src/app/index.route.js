@@ -111,6 +111,21 @@
             }
         }
       })
+
+      // more page
+      .state('main.more', {
+        url: '/more',
+        views: {
+            'center@main': {
+                templateUrl: 'app/more/more_center.html',
+                controller: 'MoreCenterController',
+                controllerAs: 'moreCenter'
+            }
+        }
+      })
+
+      // search_m page
+      // search result page
       ;
 
     $urlRouterProvider.otherwise('/home');

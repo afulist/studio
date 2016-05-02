@@ -125,7 +125,28 @@
       })
 
       // search_m page
+      .state('main.searchm', {
+        url: '/searchm',
+        views: {
+            'center@main': {
+                templateUrl: 'app/searchm/searchm_center.html',
+                controller: 'SearchMCenterController',
+                controllerAs: 'searchmCenter'
+            }
+        }
+      })
+
       // search result page
+      .state('main.result', {
+        url: '/result',
+        views: {
+            'center@main': {
+                templateUrl: 'app/result/result_center.html',
+                controller: 'ResultCenterController',
+                controllerAs: 'resultCenter'
+            }
+        }
+      })
       ;
 
     $urlRouterProvider.otherwise('/home');

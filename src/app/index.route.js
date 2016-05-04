@@ -120,12 +120,6 @@
                 templateUrl: 'app/more/more_center.html',
                 controller: 'MoreCenterController',
                 controllerAs: 'moreCenter'
-            },
-            'leftM@main': {
-                templateUrl: 'app/components/dummy/dummy.html'
-            },
-            'rightM@main': {
-                templateUrl: 'app/components/dummy/dummy.html'
             }
         }
       })
@@ -138,12 +132,6 @@
                 templateUrl: 'app/searchm/searchm_center.html',
                 controller: 'SearchMCenterController',
                 controllerAs: 'searchmCenter'
-            },
-            'leftM@main': {
-                templateUrl: 'app/components/dummy/dummy.html'
-            },
-            'rightM@main': {
-                templateUrl: 'app/components/dummy/dummy.html'
             }
         }
       })
@@ -156,12 +144,6 @@
                 templateUrl: 'app/result/result_center.html',
                 controller: 'ResultCenterController',
                 controllerAs: 'resultCenter'
-            },
-            'leftM@main': {
-                templateUrl: 'app/components/dummy/dummy.html'
-            },
-            'rightM@main': {
-                templateUrl: 'app/components/dummy/dummy.html'
             }
         }
       })

@@ -7,7 +7,7 @@
 
   /** @ngInject */
   // after config block: Service Setting
-  function runBlock($log, $rootScope, $timeout, firebase) {
+  function runBlock($log, $rootScope, $timeout, $mdMedia, firebase) {
     // firebase env
     /* @if ENV='dev' */
     // only used in local, shoundn't deploy online
@@ -23,14 +23,17 @@
     /* @endif */
 
     // auto scroll
-    $rootScope.$on('$viewContentLoaded', function () { // eslint-disable-line
+    var delay
+    if ($mdMedia('gt-md') || $mdMedia('md')) {
+      delay = 0;
+    } else {
+      delay = 300;
+    }
+    $rootScope.$on('$stateChangeSuccess', function () { // eslint-disable-line
       // scroll to top has bug if no $timeout here
-      var timeout = $timeout(function () {
-        if (document.readyState === 'complete') { // eslint-disable-line
-          document.getElementById('top').scrollIntoView(true); // eslint-disable-line
-          clearTimeout(timeout);
-        }
-      }, 150);
+      $timeout(function () { // eslint-disable-line
+        document.getElementById('top').scrollIntoView(true); // eslint-disable-line
+      }, delay);
     });
 
     // debug log

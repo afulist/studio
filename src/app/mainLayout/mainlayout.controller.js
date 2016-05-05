@@ -3,10 +3,10 @@
 
   angular
     .module('travel')
-    .controller('MainController', MainController);
+    .controller('MainLayoutController', MainLayoutController);
 
   /** @ngInject */
-  function MainController() {
+  function MainLayoutController() {
     // var vm = this;
 
     // ==view data==

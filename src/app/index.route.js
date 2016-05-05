@@ -9,38 +9,47 @@
   function routerConfig($stateProvider, $urlRouterProvider) {
     $stateProvider
 
-      // main page
-      .state('main', {
-        templateUrl: 'app/main/main.html',
-        controller: 'MainController',
-        controllerAs: 'main'
+      // main layout
+      .state('mainLayout', {
+        templateUrl: 'app/mainLayout/mainlayout.html',
+        controller: 'MainLayoutController',
+        controllerAs: 'mainLayout'
       })
 
+      // plan layout
+      .state('planLayout', {
+        templateUrl: 'app/planLayout/planlayout.html',
+        controller: 'PlanLayoutController',
+        controllerAs: 'planLayout'
+      })
+
+      /*====================================*/
+
       // home page
-      .state('main.home', {
+      .state('mainLayout.home', {
         url: '/home',
         views: {
-            'leftM@main': {
+            'leftM@mainLayout': {
                 templateUrl: 'app/home/home_left_m.html',
                 controller: 'HomeLeftMController',
                 controllerAs: 'homeLeftM'
             },
-            'left@main': {
+            'left@mainLayout': {
                 templateUrl: 'app/home/home_left.html',
                 controller: 'HomeLeftController',
                 controllerAs: 'homeLeft'
             },
-            'center@main': {
+            'center@mainLayout': {
                 templateUrl: 'app/home/home_center.html',
                 controller: 'HomeCenterController',
                 controllerAs: 'homeCenter'
             },
-            'right@main': {
+            'right@mainLayout': {
                 templateUrl: 'app/home/home_right.html',
                 controller: 'HomeRightController',
                 controllerAs: 'homeRight'
             },
-            'rightM@main': {
+            'rightM@mainLayout': {
                 templateUrl: 'app/home/home_right_m.html',
                 controller: 'HomeRightMController',
                 controllerAs: 'homeRightM'
@@ -49,30 +58,30 @@
       })
 
       // my plan page
-      .state('main.myplan', {
+      .state('mainLayout.myplan', {
         url: '/myplan',
         views: {
-            'leftM@main': {
+            'leftM@mainLayout': {
                 templateUrl: 'app/myplan/myplan_left_m.html',
                 controller: 'MyplanLeftMController',
                 controllerAs: 'myplanLeftM'
             },
-            'left@main': {
+            'left@mainLayout': {
                 templateUrl: 'app/myplan/myplan_left.html',
                 controller: 'MyplanLeftController',
                 controllerAs: 'myplanLeft'
             },
-            'center@main': {
+            'center@mainLayout': {
                 templateUrl: 'app/myplan/myplan_center.html',
                 controller: 'MyplanCenterController',
                 controllerAs: 'myplanCenter'
             },
-            'right@main': {
+            'right@mainLayout': {
                 templateUrl: 'app/myplan/myplan_right.html',
                 controller: 'MyplanRightController',
                 controllerAs: 'myplanRight'
             },
-            'rightM@main': {
+            'rightM@mainLayout': {
                 templateUrl: 'app/myplan/myplan_right_m.html',
                 controller: 'MyplanRightMController',
                 controllerAs: 'myplanRightM'
@@ -81,30 +90,30 @@
       })
 
       // my favor plan page
-      .state('main.myfavor', {
+      .state('mainLayout.myfavor', {
         url: '/myfavor',
         views: {
-            'leftM@main': {
+            'leftM@mainLayout': {
                 templateUrl: 'app/myfavor/myfavor_left_m.html',
                 controller: 'MyfavorLeftMController',
                 controllerAs: 'myfavorLeftM'
             },
-            'left@main': {
+            'left@mainLayout': {
                 templateUrl: 'app/myfavor/myfavor_left.html',
                 controller: 'MyfavorLeftController',
                 controllerAs: 'myfavorLeft'
             },
-            'center@main': {
+            'center@mainLayout': {
                 templateUrl: 'app/myfavor/myfavor_center.html',
                 controller: 'MyfavorCenterController',
                 controllerAs: 'myfavorCenter'
             },
-            'right@main': {
+            'right@mainLayout': {
                 templateUrl: 'app/myfavor/myfavor_right.html',
                 controller: 'MyfavorRightController',
                 controllerAs: 'myfavorRight'
             },
-            'rightM@main': {
+            'rightM@mainLayout': {
                 templateUrl: 'app/myfavor/myfavor_right_m.html',
                 controller: 'MyfavorRightMController',
                 controllerAs: 'myfavorRightM'
@@ -113,10 +122,10 @@
       })
 
       // more page
-      .state('main.more', {
-        url: '/more',
+      .state('mainLayout.more', {
+        url: '/more/{user}',
         views: {
-            'center@main': {
+            'center@mainLayout': {
                 templateUrl: 'app/more/more_center.html',
                 controller: 'MoreCenterController',
                 controllerAs: 'moreCenter'
@@ -124,11 +133,23 @@
         }
       })
 
+      // search result page
+      .state('mainLayout.result', {
+        url: '/result',
+        views: {
+            'center@mainLayout': {
+                templateUrl: 'app/result/result_center.html',
+                controller: 'ResultCenterController',
+                controllerAs: 'resultCenter'
+            }
+        }
+      })
+
       // search_m page
-      .state('main.searchm', {
+      .state('mainLayout.searchm', {
         url: '/searchm',
         views: {
-            'center@main': {
+            'center@mainLayout': {
                 templateUrl: 'app/searchm/searchm_center.html',
                 controller: 'SearchMCenterController',
                 controllerAs: 'searchmCenter'
@@ -136,17 +157,41 @@
         }
       })
 
-      // search result page
-      .state('main.result', {
-        url: '/result',
+      // plan in home page
+      .state('planLayout.home', {
+        url: '/home/{plan}',
         views: {
-            'center@main': {
-                templateUrl: 'app/result/result_center.html',
-                controller: 'ResultCenterController',
-                controllerAs: 'resultCenter'
+            'leftM@planLayout': {
+                templateUrl: 'app/homePlan/homePlan_left_m.html',
+                controller: 'HomePlanLeftMController',
+                controllerAs: 'homePlanLeftM'
+            },
+            'left@planLayout': {
+                templateUrl: 'app/homePlan/homePlan_left.html',
+                controller: 'HomePlanLeftController',
+                controllerAs: 'homePlanLeft'
+            },
+            'center@planLayout': {
+                templateUrl: 'app/homePlan/homePlan_center.html',
+                controller: 'HomePlanCenterController',
+                controllerAs: 'homePlanCenter'
+            },
+            'right@planLayout': {
+                templateUrl: 'app/homePlan/homePlan_right.html',
+                controller: 'HomePlanRightController',
+                controllerAs: 'homePlanRight'
+            },
+            'rightM@planLayout': {
+                templateUrl: 'app/homePlan/homePlan_right_m.html',
+                controller: 'HomePlanRightMController',
+                controllerAs: 'homePlanRightM'
             }
         }
       })
+
+      // TODO: plan in myplan page
+
+      // TODO: edit plan in myplan page
       ;
 
     $urlRouterProvider.otherwise('/home');

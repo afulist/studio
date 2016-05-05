@@ -1,0 +1,48 @@
+<!-- mobile sideNav -->
+<md-sidenav layout="column" hide-gt-sm class="md-sidenav-left all-bg" md-component-id="left" md-is-locked-open="false" ui-view="leftM">
+</md-sidenav>
+
+<!-- center -->
+<md-content layout="column" id="content" flex class="md-padding all-bg">
+  <div layout="row" id="top"><!-- id="top" -->
+    <!-- desktop sideNav -->
+    <!-- <div flex="20" hide-sm hide-xs ui-view="left" class="content-col">
+    </div> -->
+    <!-- desktop & mobile content -->
+    <div flex ui-view="center" class="content-col">
+    </div>
+    <!-- desktop sideNav -->
+    <div flex="25" hide-sm hide-xs ui-view="right" class="content-col">
+    </div>
+  </div>
+</md-content>
+
+<!-- mobile sideNav -->
+<md-sidenav layout="column" hide-gt-sm class="md-sidenav-right all-bg" md-component-id="right" md-is-locked-open="false"  ui-view="rightM">
+</md-sidenav>
+
+
+
+
+
+
+<!-- test firebase -->
+<!-- <div>
+  <md-button class="md-raised" ng-click="main.fire()">test firebase</md-button><br>
+  ENV: {{ main.env }}<br>
+  REPEAT:
+  <ul>
+    <li ng-repeat="user in main.users">
+      {{ user.nickname }}
+    </li>
+  </ul>
+  Three-Way Binding Data: {{ bt }}<br>
+  <input type="text" ng-model="bt.nickname"/>
+</div> -->
+
+<!-- @if NODE_ENV='dev' -->
+<!-- @endif -->
+<!-- @if NODE_ENV='stage' -->
+<!-- @endif -->
+<!-- @if NODE_ENV='prod' -->
+<!-- @endif -->

@@ -1,0 +1,22 @@
+md-sidenav,
+md-sidenav.md-locked-open,
+md-sidenav.md-closed.md-locked-open-add-active {
+    min-width: 200px !important;
+    width: 75vw !important;
+    max-width: 1000px !important;
+}
+
+/* fix for scroll to top */
+#content {
+	padding-top: 0px;
+}
+.content-col {
+	padding-top: 8px;
+}
+
+/* @if ENV='dev' */
+/* @endif */
+/* @if ENV='stage' */
+/* @endif */
+/* @if ENV='prod' */
+/* @endif */

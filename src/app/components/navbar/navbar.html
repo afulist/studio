@@ -1,7 +1,7 @@
 <!-- desktop -->
 <md-toolbar layout="row" hide-sm hide-xs>
   <div class="md-toolbar-tools">
-    <a ui-sref="main.home">
+    <a ui-sref="mainLayout.home">
       <h1 layout-align-gt-sm="center">
         {{ dvm.logo }}
       </h1>
@@ -41,25 +41,25 @@
     </form>
 
     <span flex=""></span>
-    <a ui-sref="main.myplan">
+    <a ui-sref="mainLayout.myplan">
       <md-button md-no-ink class="md-raised menuBtn">
         <md-icon class="menuBtn-icon">assignment_turned_in</md-icon>
         <span>我的規劃&nbsp;</span>
       </md-button>
     </a>
-    <a ui-sref="main.myfavor">
+    <a ui-sref="mainLayout.myfavor">
       <md-button md-no-ink class="md-raised menuBtn">
         <md-icon class="menuBtn-icon">favorite</md-icon>
         <span>我的收藏&nbsp;</span>
       </md-button>
     </a>
-    <a ui-sref="main.more">
+    <a ui-sref="mainLayout.more({user:123})">
       <md-button md-no-ink class="md-raised menuBtn">
         <md-icon class="menuBtn-icon">more_vert</md-icon>
         <span>更多</span>
       </md-button>
     </a>
-    <a ui-sref="main.myfavor">
+    <a ui-sref="mainLayout.myfavor">
       <md-button md-no-ink class="md-raised md-hue-1 md-accent menuBtn">
         <md-icon class="menuBtn-icon">face</md-icon>
         <span>登入</span>

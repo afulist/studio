@@ -1,7 +1,7 @@
 <md-bottom-sheet class="md-list all-bg" ng-cloak>
   <md-list>
     <md-list-item>
-      <a ui-sref="main.home" class="bs-link">
+      <a ui-sref="mainLayout.home" class="bs-link">
         <md-button
             ng-click="bvm.listItemClick('home')"
             md-autofocus="false"
@@ -12,7 +12,7 @@
       </a>
     </md-list-item>
     <md-list-item>
-      <a ui-sref="main.searchm" class="bs-link">
+      <a ui-sref="mainLayout.searchm" class="bs-link">
         <md-button
             ng-click="bvm.listItemClick('search')"
             md-autofocus="false"
@@ -23,7 +23,7 @@
       </a>
     </md-list-item>
     <md-list-item>
-      <a ui-sref="main.myplan" class="bs-link">
+      <a ui-sref="mainLayout.myplan" class="bs-link">
         <md-button
             ng-click="bvm.listItemClick('myPlan')"
             md-autofocus="true"
@@ -35,7 +35,7 @@
       </a>
     </md-list-item>
     <md-list-item>
-      <a ui-sref="main.myfavor" class="bs-link">
+      <a ui-sref="mainLayout.myfavor" class="bs-link">
         <md-button
             ng-click="bvm.listItemClick('myFavor')"
             md-autofocus="false"
@@ -46,7 +46,7 @@
       </a>
     </md-list-item>
     <md-list-item>
-      <a ui-sref="main.more" class="bs-link">
+      <a ui-sref="mainLayout.more({user:123})" class="bs-link">
         <md-button
             ng-click="bvm.listItemClick('more')"
             md-autofocus="false"
@@ -57,7 +57,7 @@
       </a>
     </md-list-item>
     <md-list-item>
-      <a ui-sref="main.more">
+      <a ui-sref="mainLayout.more">
         <md-button
             ng-click="bvm.listItemClick('more')"
             md-autofocus="false"

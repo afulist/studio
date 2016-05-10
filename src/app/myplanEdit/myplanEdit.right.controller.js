@@ -3,10 +3,10 @@
 
   angular
     .module('travel')
-    .controller('HomePlanRightController', HomePlanRightController);
+    .controller('MyplanEditRightController', MyplanEditRightController);
 
   /** @ngInject */
-  function HomePlanRightController($log, $scope, $state, $timeout, $mdMedia) {
+  function MyplanEditRightController($log, $scope, $state, $timeout, $mdMedia) {
     var vm = this;
 
     // ==view data==

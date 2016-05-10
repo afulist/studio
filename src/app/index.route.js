@@ -17,10 +17,10 @@
       })
 
       // plan layout
-      .state('planLayout', {
-        templateUrl: 'app/planLayout/planlayout.html',
-        controller: 'PlanLayoutController',
-        controllerAs: 'planLayout'
+      .state('tripLayout', {
+        templateUrl: 'app/tripLayout/tripLayout.html',
+        controller: 'TripLayoutController',
+        controllerAs: 'tripLayout'
       })
 
       /*====================================*/
@@ -158,40 +158,100 @@
       })
 
       // plan in home page
-      .state('planLayout.home', {
+      .state('tripLayout.home', {
         url: '/home/{plan}',
         views: {
-            'leftM@planLayout': {
-                templateUrl: 'app/homePlan/homePlan_left_m.html',
-                controller: 'HomePlanLeftMController',
-                controllerAs: 'homePlanLeftM'
+            'leftM@tripLayout': {
+                templateUrl: 'app/homeTrip/homeTrip_left_m.html',
+                controller: 'HomeTripLeftMController',
+                controllerAs: 'homeTripLeftM'
             },
-            'left@planLayout': {
-                templateUrl: 'app/homePlan/homePlan_left.html',
-                controller: 'HomePlanLeftController',
-                controllerAs: 'homePlanLeft'
+            'left@tripLayout': {
+                templateUrl: 'app/homeTrip/homeTrip_left.html',
+                controller: 'HomeTripLeftController',
+                controllerAs: 'homeTripLeft'
             },
-            'center@planLayout': {
-                templateUrl: 'app/homePlan/homePlan_center.html',
-                controller: 'HomePlanCenterController',
-                controllerAs: 'homePlanCenter'
+            'center@tripLayout': {
+                templateUrl: 'app/homeTrip/homeTrip_center.html',
+                controller: 'HomeTripCenterController',
+                controllerAs: 'homeTripCenter'
             },
-            'right@planLayout': {
-                templateUrl: 'app/homePlan/homePlan_right.html',
-                controller: 'HomePlanRightController',
-                controllerAs: 'homePlanRight'
+            'right@tripLayout': {
+                templateUrl: 'app/homeTrip/homeTrip_right.html',
+                controller: 'HomeTripRightController',
+                controllerAs: 'homeTripRight'
             },
-            'rightM@planLayout': {
-                templateUrl: 'app/homePlan/homePlan_right_m.html',
-                controller: 'HomePlanRightMController',
-                controllerAs: 'homePlanRightM'
+            'rightM@tripLayout': {
+                templateUrl: 'app/homeTrip/homeTrip_right_m.html',
+                controller: 'HomeTripRightMController',
+                controllerAs: 'homeTripRightM'
             }
         }
       })
 
-      // TODO: plan in myplan page
+      // plan in myplan page
+      .state('tripLayout.myplan', {
+        url: '/myplan/{plan}',
+        views: {
+            'leftM@tripLayout': {
+                templateUrl: 'app/myplanTrip/myplanTrip_left_m.html',
+                controller: 'MyplanTripLeftMController',
+                controllerAs: 'myplanTripLeftM'
+            },
+            'left@tripLayout': {
+                templateUrl: 'app/myplanTrip/myplanTrip_left.html',
+                controller: 'MyplanTripLeftController',
+                controllerAs: 'myplanTripLeft'
+            },
+            'center@tripLayout': {
+                templateUrl: 'app/myplanTrip/myplanTrip_center.html',
+                controller: 'MyplanTripCenterController',
+                controllerAs: 'myplanTripCenter'
+            },
+            'right@tripLayout': {
+                templateUrl: 'app/myplanTrip/myplanTrip_right.html',
+                controller: 'MyplanTripRightController',
+                controllerAs: 'myplanTripRight'
+            },
+            'rightM@tripLayout': {
+                templateUrl: 'app/myplanTrip/myplanTrip_right_m.html',
+                controller: 'MyplanTripRightMController',
+                controllerAs: 'myplanTripRightM'
+            }
+        }
+      })
 
-      // TODO: edit plan in myplan page
+      // edit plan in myplan page
+      .state('tripLayout.myplan.edit', {
+        url: '/edit',
+        views: {
+            'leftM@tripLayout': {
+                templateUrl: 'app/myplanEdit/myplanEdit_left_m.html',
+                controller: 'MyplanEditLeftMController',
+                controllerAs: 'myplanEditLeftM'
+            },
+            'left@tripLayout': {
+                templateUrl: 'app/myplanEdit/myplanEdit_left.html',
+                controller: 'MyplanEditLeftController',
+                controllerAs: 'myplanEditLeft'
+            },
+            'center@tripLayout': {
+                templateUrl: 'app/myplanEdit/myplanEdit_center.html',
+                controller: 'MyplanEditCenterController',
+                controllerAs: 'myplanEditCenter'
+            },
+            'right@tripLayout': {
+                templateUrl: 'app/myplanEdit/myplanEdit_right.html',
+                controller: 'MyplanEditRightController',
+                controllerAs: 'myplanEditRight'
+            },
+            'rightM@tripLayout': {
+                templateUrl: 'app/myplanEdit/myplanEdit_right_m.html',
+                controller: 'MyplanEditRightMController',
+                controllerAs: 'myplanEditRightM'
+            }
+        }
+      })
       ;
 
     $urlRouterProvider.otherwise('/home');

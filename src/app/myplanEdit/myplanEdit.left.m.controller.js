@@ -3,10 +3,10 @@
 
   angular
     .module('travel')
-    .controller('HomePlanLeftController', HomePlanLeftController);
+    .controller('MyplanEditLeftMController', MyplanEditLeftMController);
 
   /** @ngInject */
-  function HomePlanLeftController($log, $rootScope, $mdSidenav) {
+  function MyplanEditLeftMController($log, $rootScope, $mdSidenav) {
     var vm = this;
 
     // ==view data==
@@ -27,7 +27,7 @@
     // ==all func==
     // init
     function init() {
-      $log.debug('load HomeLeftController');
+      $log.debug('load HomeLeftMController(m)');
     }
 
     // close Sidenav without click locking

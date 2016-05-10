@@ -3,10 +3,10 @@
 
   angular
     .module('travel')
-    .controller('PlanLayoutController', PlanLayoutController);
+    .controller('TripLayoutController', TripLayoutController);
 
   /** @ngInject */
-  function PlanLayoutController() {
+  function TripLayoutController() {
     // var vm = this;
 
     // ==view data==

@@ -25,16 +25,16 @@
       if ($mdMedia('gt-md') || $mdMedia('md')) {
         vm.pluginOn = true;
       }
-      $scope.$on('$stateChangeStart', function (event, toState, toParams) {
-        if (vm.pluginOn) { // prevent infinite loading
-          event.preventDefault(); // stop stateChange
-          vm.pluginOn = false;
-        }
-        // restart stateChange
-        $timeout(function() { // prevent infinite loading
-           $state.go(toState.name, toParams); // TODO-state: test
-        }, 5);
-      });
+      // $scope.$on('$stateChangeStart', function (event, toState, toParams) {
+      //   if (vm.pluginOn) { // prevent infinite loading
+      //     event.preventDefault(); // stop stateChange
+      //     vm.pluginOn = false;
+      //   }
+      //   // restart stateChange
+      //   $timeout(function() { // prevent infinite loading
+      //      $state.go(toState.name, toParams); // TODO-state: test
+      //   }, 5);
+      // });
     }
 
   }

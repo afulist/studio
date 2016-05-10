@@ -35,6 +35,7 @@
       ];
       vm.suggsetionKeyword = loadSuggsetion();
       vm.searchText = '';
+      vm.title = '搜尋';
 
       // ==view func==
       vm.toggleSidenav = toggleSidenav;

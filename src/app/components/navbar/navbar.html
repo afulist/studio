@@ -73,12 +73,12 @@
 <md-toolbar layout="row" layout-align="space-between center" hide-gt-sm>
   <div>
     <md-button ng-disabled="dvm.lockClick" class="md-primary menuBtn-m" style="width: 60px;" ng-click="dvm.toggleSidenav('left')"  aria-label="Toggle Side">
-      <span style="color:rgb(255,255,255);">選單</span>
+      <span style="color:rgb(255,255,255);">{{ dvm.optLeftNameM }}</span>
     </md-button>
   </div>
   <div>
     <md-button ng-disabled="dvm.lockClick" class="md-primary menuBtn menuFunction" ng-click="dvm.showTopNavBottomSheet()"  aria-label="Menu Function">
-       <span style="color:rgb(255,255,255);">{{ dvm.title }}</span>
+       <span style="color:rgb(255,255,255);">{{ dvm.titleM }}</span>
       <md-icon class="menuFunctionIcon">
         expand_more
       </md-icon>
@@ -86,7 +86,7 @@
   </div>
   <div>
     <md-button ng-disabled="dvm.lockClick" class="md-primary menuBtn-m" style="width: 75px;" ng-click="dvm.toggleSidenav('right')"  aria-label="Toggle Side">
-      <span style="color:rgb(255,255,255);">選選單</span>
+      <span style="color:rgb(255,255,255);">{{ dvm.optRightNameM }}</span>
     </md-button>
   </div>
 </md-toolbar>

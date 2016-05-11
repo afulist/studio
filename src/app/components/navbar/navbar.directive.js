@@ -35,7 +35,9 @@
       ];
       vm.suggsetionKeyword = loadSuggsetion();
       vm.searchText = '';
-      vm.title = '';
+      vm.titleM = '';
+      vm.optLeftNameM = 'L選擇';
+      vm.optRightNameM = 'R選擇';
 
       // ==view func==
       vm.toggleSidenav = toggleSidenav;
@@ -51,7 +53,7 @@
       function init() {
         // get title in mobile navBar
         $scope.$on('$stateChangeSuccess', function () {
-          vm.title = mobileTitle.title;
+          vm.titleM = mobileTitle.title;
         });
       }
 

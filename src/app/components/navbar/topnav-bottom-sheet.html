@@ -4,7 +4,7 @@
       <a ui-sref="mainLayout.home" class="bs-link">
         <md-button
             ng-click="bvm.listItemClick('home')"
-            md-autofocus="false"
+            md-autofocus="bvm.currentPage==='home'"
             class="md-list-item-content" >
           <md-icon >home</md-icon>
           <span class="md-inline-list-icon-label">首頁</span>
@@ -15,7 +15,7 @@
       <a ui-sref="mainLayout.searchm" class="bs-link">
         <md-button
             ng-click="bvm.listItemClick('search')"
-            md-autofocus="false"
+            md-autofocus="bvm.currentPage==='searchm'"
             class="md-list-item-content" >
           <md-icon >search</md-icon>
           <span class="md-inline-list-icon-label">搜尋</span>
@@ -26,7 +26,7 @@
       <a ui-sref="mainLayout.myplan" class="bs-link">
         <md-button
             ng-click="bvm.listItemClick('myPlan')"
-            md-autofocus="true"
+            md-autofocus="bvm.currentPage==='myplan'"
             class="md-list-item-content" >
           <md-icon >assignment_turned_in</md-icon>
           <!-- <md-icon >work</md-icon> -->
@@ -38,7 +38,7 @@
       <a ui-sref="mainLayout.myfavor" class="bs-link">
         <md-button
             ng-click="bvm.listItemClick('myFavor')"
-            md-autofocus="false"
+            md-autofocus="bvm.currentPage==='myfavor'"
             class="md-list-item-content" >
           <md-icon >favorite</md-icon>
           <span class="md-inline-list-icon-label">我的收藏</span>
@@ -49,7 +49,7 @@
       <a ui-sref="mainLayout.more({user:123})" class="bs-link">
         <md-button
             ng-click="bvm.listItemClick('more')"
-            md-autofocus="false"
+            md-autofocus="bvm.currentPage==='more'"
             class="md-list-item-content" >
           <md-icon >more_vert</md-icon>
           <span class="md-inline-list-icon-label">更多</span>

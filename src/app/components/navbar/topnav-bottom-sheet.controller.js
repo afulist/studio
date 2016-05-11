@@ -6,15 +6,35 @@
     .controller('TopNavBottomSheetController', TopNavBottomSheetCtrl);
 
   /** @ngInject */
-  function TopNavBottomSheetCtrl($log, $mdBottomSheet) {
+  function TopNavBottomSheetCtrl($log, $mdBottomSheet, $state) {
     var vm = this;
 
     // ==view data==
+    vm.currentPage = null;
 
     // ==view func==
     vm.listItemClick = listItemClick;
 
+    // ==init func==
+    init();
+
     // ==all func==
+    // init
+    function init() {
+      // get state name
+      if ($state.includes('*.home.*')) {
+        vm.currentPage = 'home';
+      } else if ($state.includes('*.myplan.*')) {
+        vm.currentPage = 'myplan';
+      } else if ($state.includes('*.myfavor.*')) {
+        vm.currentPage = 'myfavor';
+      } else if ($state.includes('*.more.*')) {
+        vm.currentPage = 'more';
+      } else if ($state.includes('*.searchm.*') || $state.includes('*.result.*')) {
+        vm.currentPage = 'searchm';
+      }
+    }
+
     // click nav item
     function listItemClick(item) {
       // close sheet

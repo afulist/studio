@@ -54,6 +54,13 @@
                 controller: 'HomeRightMController',
                 controllerAs: 'homeRightM'
             }
+        },
+        resolve: {
+          mobileTitle: 'mobileTitle',
+          initPage: ['mobileTitle', function(mobileTitle){
+            mobileTitle.title = '首頁';
+            return mobileTitle.title;
+          }]
         }
       })
 
@@ -86,6 +93,13 @@
                 controller: 'MyplanRightMController',
                 controllerAs: 'myplanRightM'
             }
+        },
+        resolve: {
+          mobileTitle: 'mobileTitle',
+          initPage: ['mobileTitle', function(mobileTitle){
+            mobileTitle.title = '我的規劃';
+            return mobileTitle.title;
+          }]
         }
       })
 
@@ -118,6 +132,13 @@
                 controller: 'MyfavorRightMController',
                 controllerAs: 'myfavorRightM'
             }
+        },
+        resolve: {
+          mobileTitle: 'mobileTitle',
+          initPage: ['mobileTitle', function(mobileTitle){
+            mobileTitle.title = '我的收藏';
+            return mobileTitle.title;
+          }]
         }
       })
 
@@ -130,6 +151,13 @@
                 controller: 'MoreCenterController',
                 controllerAs: 'moreCenter'
             }
+        },
+        resolve: {
+          mobileTitle: 'mobileTitle',
+          initPage: ['mobileTitle', function(mobileTitle){
+            mobileTitle.title = '更多';
+            return mobileTitle.title;
+          }]
         }
       })
 
@@ -142,6 +170,13 @@
                 controller: 'ResultCenterController',
                 controllerAs: 'resultCenter'
             }
+        },
+        resolve: {
+          mobileTitle: 'mobileTitle',
+          initPage: ['mobileTitle', function(mobileTitle){
+            mobileTitle.title = '搜尋';
+            return mobileTitle.title;
+          }]
         }
       })
 
@@ -154,6 +189,13 @@
                 controller: 'SearchMCenterController',
                 controllerAs: 'searchmCenter'
             }
+        },
+        resolve: {
+          mobileTitle: 'mobileTitle',
+          initPage: ['mobileTitle', function(mobileTitle){
+            mobileTitle.title = '搜尋';
+            return mobileTitle.title;
+          }]
         }
       })
 
@@ -186,6 +228,13 @@
                 controller: 'HomeTripRightMController',
                 controllerAs: 'homeTripRightM'
             }
+        },
+        resolve: {
+          mobileTitle: 'mobileTitle',
+          initPage: ['mobileTitle', function(mobileTitle){
+            mobileTitle.title = '首頁';
+            return mobileTitle.title;
+          }]
         }
       })
 
@@ -218,6 +267,13 @@
                 controller: 'MyplanTripRightMController',
                 controllerAs: 'myplanTripRightM'
             }
+        },
+        resolve: {
+          mobileTitle: 'mobileTitle',
+          initPage: ['mobileTitle', function(mobileTitle){
+            mobileTitle.title = '我的規劃';
+            return mobileTitle.title;
+          }]
         }
       })
 
@@ -250,6 +306,13 @@
                 controller: 'MyplanEditRightMController',
                 controllerAs: 'myplanEditRightM'
             }
+        },
+        resolve: {
+          mobileTitle: 'mobileTitle',
+          initPage: ['mobileTitle', function(mobileTitle){
+            mobileTitle.title = '我的規劃';
+            return mobileTitle.title;
+          }]
         }
       })
       ;

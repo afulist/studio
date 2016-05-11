@@ -21,7 +21,7 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController($log, $mdSidenav, $mdBottomSheet) {
+    function NavbarController($log, $mdSidenav, $mdBottomSheet, $scope, mobileTitle) {
       var vm = this;
 
       // ==view data==
@@ -35,7 +35,7 @@
       ];
       vm.suggsetionKeyword = loadSuggsetion();
       vm.searchText = '';
-      vm.title = '搜尋';
+      vm.title = '';
 
       // ==view func==
       vm.toggleSidenav = toggleSidenav;
@@ -43,7 +43,18 @@
       vm.querySuggsetion = querySuggsetion;
       vm.selectedItemChange = selectedItemChange;
 
+      // ==init func==
+      init();
+
       // ==all func==
+      // init
+      function init() {
+        // get title in mobile navBar
+        $scope.$on('$stateChangeSuccess', function () {
+          vm.title = mobileTitle.title;
+        });
+      }
+
       // open or close Sidenav exclusive with click locking
       function toggleSidenav(menuId) {
         vm.lockClick = true;

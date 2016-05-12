@@ -82,7 +82,7 @@
 
       // go back to previous page
       function navBack(prevState, prevParam) {
-        $state.go(prevState);
+        $state.go(prevState, {}, { reload: true }); // reload to get reslove data again
       }
 
       // show BottomSheet internally

@@ -254,6 +254,48 @@
         }
       })
 
+      // plan in myfavor page
+      .state('tripLayout.myfavor', {
+        url: '/myfavor/{plan}',
+        views: {
+            'leftM@tripLayout': {
+                templateUrl: 'app/homeTrip/homeTrip_left_m.html',
+                controller: 'HomeTripLeftMController',
+                controllerAs: 'homeTripLeftM'
+            },
+            'left@tripLayout': {
+                templateUrl: 'app/homeTrip/homeTrip_left.html',
+                controller: 'HomeTripLeftController',
+                controllerAs: 'homeTripLeft'
+            },
+            'center@tripLayout': {
+                templateUrl: 'app/homeTrip/homeTrip_center.html',
+                controller: 'HomeTripCenterController',
+                controllerAs: 'homeTripCenter'
+            },
+            'right@tripLayout': {
+                templateUrl: 'app/homeTrip/homeTrip_right.html',
+                controller: 'HomeTripRightController',
+                controllerAs: 'homeTripRight'
+            },
+            'rightM@tripLayout': {
+                templateUrl: 'app/homeTrip/homeTrip_right_m.html',
+                controller: 'HomeTripRightMController',
+                controllerAs: 'homeTripRightM'
+            }
+        },
+        resolve: {
+          mobileTitle: 'mobileTitle',
+          initPage: ['mobileTitle', function(mobileTitle){
+            mobileTitle.title = '我的收藏';
+            mobileTitle.optLeftName = '返回';
+            mobileTitle.prevState = 'mainLayout.myfavor';
+            mobileTitle.optRightName = '操作';
+            return mobileTitle;
+          }]
+        }
+      })
+
       // plan in myplan page
       .state('tripLayout.myplan', {
         url: '/myplan/{plan}',

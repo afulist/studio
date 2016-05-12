@@ -21,7 +21,7 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController($log, $mdSidenav, $mdBottomSheet, $scope, mobileTitle) {
+    function NavbarController($log, $mdSidenav, $mdBottomSheet, $scope, $state, mobileTitle) {
       var vm = this;
 
       // ==view data==
@@ -36,11 +36,13 @@
       vm.suggsetionKeyword = loadSuggsetion();
       vm.searchText = '';
       vm.titleM = '';
-      vm.optLeftNameM = 'L選擇';
-      vm.optRightNameM = 'R選擇';
+      vm.optLeftNameM = '';
+      vm.prevStateM = '';
+      vm.optRightNameM = '';
 
       // ==view func==
       vm.toggleSidenav = toggleSidenav;
+      vm.navBack = navBack;
       vm.showTopNavBottomSheet = showTopNavBottomSheet;
       vm.querySuggsetion = querySuggsetion;
       vm.selectedItemChange = selectedItemChange;
@@ -54,6 +56,9 @@
         // get title in mobile navBar
         $scope.$on('$stateChangeSuccess', function () {
           vm.titleM = mobileTitle.title;
+          vm.optLeftNameM = mobileTitle.optLeftName;
+          vm.prevStateM = mobileTitle.prevState;
+          vm.optRightNameM = mobileTitle.optRightName;
         });
       }
 
@@ -73,6 +78,11 @@
              });
           });
         }
+      }
+
+      // go back to previous page
+      function navBack(prevState, prevParam) {
+        $state.go(prevState);
       }
 
       // show BottomSheet internally

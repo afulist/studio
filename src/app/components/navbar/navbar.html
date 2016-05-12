@@ -72,8 +72,11 @@
 <!-- mobile: button desc changed by routing -->
 <md-toolbar layout="row" layout-align="space-between center" hide-gt-sm>
   <div>
-    <md-button mg ng-disabled="dvm.lockClick||dvm.optLeftNameM===''" class="md-primary menuBtn-m" style="width: 60px;" ng-click="dvm.toggleSidenav('left')"  aria-label="Toggle Side">
+    <md-button ng-hide="dvm.optLeftNameM==='返回'" ng-disabled="dvm.lockClick||dvm.optLeftNameM===''" class="md-primary menuBtn-m" ng-click="dvm.toggleSidenav('left')" aria-label="Toggle Side">
       <span style="color:rgb(255,255,255);">{{ dvm.optLeftNameM }}</span>
+    </md-button>
+    <md-button ng-show="dvm.optLeftNameM==='返回'" ng-disabled="dvm.lockClick||dvm.optLeftNameM===''" class="md-primary menuBtn-m" ng-click="dvm.navBack(dvm.prevStateM)" aria-label="Toggle Side">
+      <md-icon class="menuBtn-icon" style="color:rgb(255,255,255);margin-left: -25px;">arrow_back</md-icon>
     </md-button>
   </div>
   <div>
@@ -85,7 +88,7 @@
     </md-button>
   </div>
   <div>
-    <md-button ng-disabled="dvm.lockClick||dvm.optRightNameM===''" class="md-primary menuBtn-m" style="width: 75px;" ng-click="dvm.toggleSidenav('right')"  aria-label="Toggle Side">
+    <md-button ng-disabled="dvm.lockClick||dvm.optRightNameM===''" class="md-primary menuBtn-m" ng-click="dvm.toggleSidenav('right')"  aria-label="Toggle Side">
       <span style="color:rgb(255,255,255);">{{ dvm.optRightNameM }}</span>
     </md-button>
   </div>

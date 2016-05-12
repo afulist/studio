@@ -8,12 +8,14 @@
   /** @ngInject */
   function mobileTitle() {
     return {
-      title: ''
+      title: '',
+      optLeftName: '',
+      prevState: '',
+      optRightName: ''
     };
     // function getplans(locObj) {
     //   this.loadLoc = locObj;
     //   return null;
     // }
-
   }
 })();

@@ -81,7 +81,7 @@
       }
 
       // go back to previous page
-      function navBack(prevState, prevParam) {
+      function navBack(prevState) {
         $state.go(prevState, {}, { reload: true }); // reload to get reslove data again
       }
 

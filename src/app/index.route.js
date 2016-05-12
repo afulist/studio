@@ -248,7 +248,7 @@
             mobileTitle.title = '首頁';
             mobileTitle.optLeftName = '返回';
             mobileTitle.prevState = 'mainLayout.home';
-            mobileTitle.optRightName = '操作';
+            mobileTitle.optRightName = '功能';
             return mobileTitle;
           }]
         }
@@ -290,7 +290,7 @@
             mobileTitle.title = '我的收藏';
             mobileTitle.optLeftName = '返回';
             mobileTitle.prevState = 'mainLayout.myfavor';
-            mobileTitle.optRightName = '操作';
+            mobileTitle.optRightName = '功能';
             return mobileTitle;
           }]
         }
@@ -332,7 +332,7 @@
             mobileTitle.title = '我的規劃';
             mobileTitle.optLeftName = '返回';
             mobileTitle.prevState = 'mainLayout.myplan';
-            mobileTitle.optRightName = '操作';
+            mobileTitle.optRightName = '功能';
             return mobileTitle;
           }]
         }
@@ -374,7 +374,7 @@
             mobileTitle.title = '我的規劃';
             mobileTitle.optLeftName = '返回';
             mobileTitle.prevState = 'tripLayout.myplan';
-            mobileTitle.optRightName = '操作';
+            mobileTitle.optRightName = '功能';
             return mobileTitle;
           }]
         }

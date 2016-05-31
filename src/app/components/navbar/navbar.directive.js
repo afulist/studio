@@ -160,7 +160,9 @@
           $log.debug('Item changed to ', item, 'with ', vm.selectedLoc);
           // scroll to top
           document.getElementById('top').scrollIntoView(true); // eslint-disable-line
-          // TODO-?: storing keyword
+          // TODO-search: storing keyword
+          // change page
+          $state.go('mainLayout.result', {location: vm.selectedLoc.id, keyword: item.value});
         }
       }
 

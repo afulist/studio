@@ -171,7 +171,7 @@
 
       // search result page
       .state('mainLayout.result', {
-        url: '/result',
+        url: '/result/{location}/{keyword}',
         views: {
             'center@mainLayout': {
                 templateUrl: 'app/result/result_center.html',

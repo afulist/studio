@@ -1,3 +1,38 @@
-msearch
+<div style="margin-left:10px;margin-top:10px;">
+	<!-- search location selector -->
+	<strong style="font-size:17px;">地區</strong>
+	<md-whiteframe class="md-whiteframe-2dp search-select-m" layout layout-align="center center">
+	  <md-input-container>
+	    <label>&nbsp;</label>
+	    <md-select class="md-search-loc" ng-model="searchmCenter.selectedLoc" aria-label="search-loc" ng-model-options="{trackBy: '$value.id'}" placeholder="搜尋地區">
+	      <md-option ng-value="{{loc}}" ng-repeat="loc in searchmCenter.locations">
+	        <span>{{loc.name}}</span>
+	      </md-option>
+	    </md-select>
+	  </md-input-container>
+	</md-whiteframe>
 
-<a ui-sref="mainLayout.result">搜尋</a>
+	<!-- search keyword autocomplete -->
+	<br><br><strong style="font-size:17px;">關鍵字</strong>
+	<form ng-submit="searchmCenter.search()">
+	  <md-autocomplete
+	      style="width:250px;margin-top:7px;"
+	      placeholder="行程名稱、城市"
+	      md-min-length="0"
+	      md-autoselect="true"
+	      md-search-text="searchmCenter.searchText"
+	      md-selected-item="searchmCenter.selectedItem"
+	      md-selected-item-change="searchmCenter.selectedItemChange(item)"
+	      md-items="item in searchmCenter.querySuggsetion(searchmCenter.searchText)"
+	      md-item-text="item.display">
+	    <md-item-template>
+	      <span ng-if="item.type==='currentText'" tabIndex="-1"  style="font-size: 19px;">
+	        <md-icon >search</md-icon>
+	        <span md-highlight-text="searchmCenter.searchText" md-highlight-flags="^i">{{searchmCenter.searchText}}</span>
+	      </span>
+	      <span ng-if="item.type!=='currentText'" md-highlight-text="searchmCenter.searchText" md-highlight-flags="^i" style="font-size:19px;">{{item.display}}
+	      </span>
+	    </md-item-template>
+	  </md-autocomplete>
+	</form>
+</div>

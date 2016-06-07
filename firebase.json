@@ -1,46 +1,49 @@
 /* deploy note */
-// [DISABLE]deploy to dev
-// 0.gulp serve:dist --env dev // still enable this line
-// 1.gulp build --env dev
-// 2.firebase deploy:hosting -f pytrip-dev -m v0.0.0
-// 3.firebase-bolt rules.bolt
-// 4.firebase deploy:rules -f pytrip-dev
+/* !need update to last version tools */
+// deploy to dev
+// 0.gulp serve:dist --env dev
+// X.gulp build --env dev
+// X.firebase deploy --only hosting --project pytrip-dev -m v0.0.0
+// -3.firebase-bolt rules.bolt
+// -4.firebase deploy:rules -f pytrip-dev
 //
 // deploy to stage
 // 0.gulp serve:dist --env stage
 // 1.gulp build --env stage
-// 2.firebase deploy:hosting -f pytrip-stage -m v0.0.0
+// 2.firebase deploy --only hosting --project pytrip-stage -m v0.0.0
 //
 // deploy to prod
 // 0.gulp serve:dist
 // 1.gulp build
-// 2.firebase deploy:hosting
-// 3.firebase-bolt rules.bolt
-// 4.firebase deploy:rules
+// 2.firebase deploy --only hosting --project pytrip -m v0.0.0
+// -3.firebase-bolt rules.bolt
+// -4.firebase deploy:rules
 //
 // more CLI detail in https://github.com/firebase/firebase-tools
 
 {
-  "firebase": "pytrip",
-  "public": "dist",
-  "rules": "rules.json",
-  "ignore": [
-  	"bower.json",
-    "firebase.json",
-    "rules.bolt",
-    "rules.json",
-  	"gulpfile.js",
-  	"karma.conf.js",
-  	"package.json",
-  	"protractor.conf.js",
-  	"README.md",
-    "**/.*",
-    "**/bower_components/**",
-    "**/bower_custom/**",
-    "**/e2e/**",
-    "**/gulp/**",
-    "**/node_modules/**",
-    "**/src/**",
-    "**/coverage/**"
-  ]
+  "hosting": {
+    // "firebase": "pytrip",
+    "public": "dist",
+    "rules": "rules.json",
+    "ignore": [
+      "bower.json",
+      "firebase.json",
+      "rules.bolt",
+      "rules.json",
+      "gulpfile.js",
+      "karma.conf.js",
+      "package.json",
+      "protractor.conf.js",
+      "README.md",
+      "**/.*",
+      "**/bower_components/**",
+      "**/bower_custom/**",
+      "**/e2e/**",
+      "**/gulp/**",
+      "**/node_modules/**",
+      "**/src/**",
+      "**/coverage/**"
+    ]
+  }
 }

@@ -60,8 +60,7 @@
             vm.selectedLoc = { id: 2, name: '台灣' };
           } else {
             vm.searchText = toParams.keyword;
-            angular.forEach(vm.locations, function (item, key, obj) {
-              console.log(item.id, toParams.location);
+            angular.forEach(vm.locations, function (item) {
               if(item.id.toString() === toParams.location) {
                 vm.selectedLoc = item;
               }

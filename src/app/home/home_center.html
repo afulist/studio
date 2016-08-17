@@ -2,18 +2,18 @@
   <!-- desc -->
   <div class="plans-desc">
     <span hide-xs class="plans-desc-loc">{{homeCenter.loc}}的行程，共34個</span>
-    <md-input-container hide-xs class="sort-container">
+    <md-input-container hide-xs class="sort-container" ng-hide="homeCenter.loc==='最新'">
       <label>&nbsp;</label>
-      <md-select ng-model="homeCenter.selectedSort" aria-label="plan sort" ng-model-options="{trackBy: '$value.id'}" placeholder="搜尋地區">
+      <md-select ng-model="homeCenter.selectedSort" aria-label="plan sort" ng-model-options="{trackBy: '$value.id'}" placeholder="">
         <md-option ng-value="{{sort}}" ng-repeat="sort in homeCenter.plansSort">
           <span>{{sort.name}}</span>
         </md-option>
       </md-select>
     </md-input-container>
     <div hide-gt-sm hide-sm class="plans-desc-loc-m">{{homeCenter.loc}}的行程，共2222個</div>
-    <md-input-container hide-gt-sm hide-sm class="sort-container-m">
+    <md-input-container hide-gt-sm hide-sm class="sort-container-m" ng-hide="homeCenter.loc==='最新'">
       <label>&nbsp;</label>
-      <md-select ng-model="homeCenter.selectedSort" aria-label="plan sort" ng-model-options="{trackBy: '$value.id'}" placeholder="搜尋地區">
+      <md-select ng-model="homeCenter.selectedSort" aria-label="plan sort" ng-model-options="{trackBy: '$value.id'}" placeholder="">
         <md-option ng-value="{{sort}}" ng-repeat="sort in homeCenter.plansSort">
           <span>{{sort.name}}</span>
         </md-option>

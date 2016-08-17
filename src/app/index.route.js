@@ -173,10 +173,30 @@
       .state('mainLayout.result', {
         url: '/result/{location}/{keyword}',
         views: {
+            // 'leftM@mainLayout': {
+            //     templateUrl: 'app/result/result_left_m.html',
+            //     controller: 'ResultLeftMController',
+            //     controllerAs: 'resultLeftM'
+            // },
+            // 'left@mainLayout': {
+            //     templateUrl: 'app/result/result_left.html',
+            //     controller: 'ResultLeftController',
+            //     controllerAs: 'resultLeft'
+            // },
             'center@mainLayout': {
                 templateUrl: 'app/result/result_center.html',
                 controller: 'ResultCenterController',
                 controllerAs: 'resultCenter'
+            },
+            'right@mainLayout': {
+                templateUrl: 'app/result/result_right.html',
+                controller: 'ResultRightController',
+                controllerAs: 'resultRight'
+            },
+            'rightM@mainLayout': {
+                templateUrl: 'app/result/result_right_m.html',
+                controller: 'ResultRightMController',
+                controllerAs: 'resultRightM'
             }
         },
         resolve: {

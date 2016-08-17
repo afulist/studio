@@ -1,19 +1,15 @@
 <md-list class="loc-list">
 
   <!-- regular location list -->
-  <md-list-item ng-click="homeLeft.selectLoc('最新')" class="loc-list-item">
-    <p class="loc-list-item-text">最新</p>
-  </md-list-item>
-  <md-divider></md-divider>
-  <md-list-item ng-repeat="loc in homeLeft.locations" ng-click="homeLeft.selectLoc(loc)" class="loc-list-item">
+  <md-list-item ng-repeat="loc in resultLeft.locations" ng-click="resultLeft.selectLoc(loc)" class="loc-list-item">
     <p class="loc-list-item-text">{{ loc.name }}</p>
   </md-list-item>
   <md-divider></md-divider>
-  <md-list-item ng-repeat="loc in homeLeft.locations" ng-click="homeLeft.selectLoc(loc)" class="loc-list-item">
+  <md-list-item ng-repeat="loc in resultLeft.locations" ng-click="resultLeft.selectLoc(loc)" class="loc-list-item">
     <p class="loc-list-item-text">{{ loc.name }}</p>
   </md-list-item>
   <md-divider></md-divider>
-  <md-list-item ng-repeat="loc in homeLeft.locations" ng-click="homeLeft.selectLoc(loc)" class="loc-list-item">
+  <md-list-item ng-repeat="loc in resultLeft.locations" ng-click="resultLeft.selectLoc(loc)" class="loc-list-item">
     <p class="loc-list-item-text">{{ loc.name }}</p>
   </md-list-item>
 
@@ -25,15 +21,15 @@
 
   <!-- <md-divider></md-divider> -->
   <!-- test folder list -->
-<!--   <md-list-item ng-repeat="loc in homeLeft.locations" ng-click="homeLeft.test()" class="loc-list-item">
+<!--   <md-list-item ng-repeat="loc in resultLeft.locations" ng-click="resultLeft.test()" class="loc-list-item">
     <p class="folder-list-item-text">{{ loc.name }}</p>
-    <md-icon ng-click="homeLeft.test()" class="md-secondary" aria-label="create">create</md-icon>
-    <md-icon ng-click="homeLeft.test()" class="md-secondary" aria-label="delete">delete</md-icon>
+    <md-icon ng-click="resultLeft.test()" class="md-secondary" aria-label="create">create</md-icon>
+    <md-icon ng-click="resultLeft.test()" class="md-secondary" aria-label="delete">delete</md-icon>
   </md-list-item> -->
 
 <!--   <md-divider></md-divider> -->
   <!-- folder list -->
-<!--   <md-list-item ng-repeat="loc in homeLeft.locations" ng-click="test()" class="loc-list-item">
+<!--   <md-list-item ng-repeat="loc in resultLeft.locations" ng-click="test()" class="loc-list-item">
     <p class="folder-list-item-text-m">{{ loc.name }}</p> -->
   	<!-- editor menu -->
 <!--   	<md-menu ng-click="" class="md-secondary">

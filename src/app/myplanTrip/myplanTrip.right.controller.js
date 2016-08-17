@@ -25,6 +25,7 @@
       if ($mdMedia('gt-md') || $mdMedia('md')) {
         vm.pluginOn = true;
       }
+      // DISABLE: routing bug
       // $scope.$on('$stateChangeStart', function (event, toState, toParams) {
       //   if (vm.pluginOn) { // prevent infinite loading
       //     event.preventDefault(); // stop stateChange

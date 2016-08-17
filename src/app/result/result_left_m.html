@@ -4,19 +4,15 @@
     <md-list class="loc-list" style="padding:2px;padding-right:3px;">
 
       <!-- regular location list -->
-      <md-list-item ng-click="homeLeftM.selectLoc('最新', 'left')" class="loc-list-item">
-        <p class="loc-list-item-text">最新</p>
-      </md-list-item>
-      <md-divider></md-divider>
-      <md-list-item ng-repeat="loc in homeLeftM.locations" ng-click="homeLeftM.selectLoc(loc, 'left')" class="loc-list-item">
+      <md-list-item ng-repeat="loc in resultLeftM.locations" ng-click="resultLeftM.selectLoc(loc, 'left')" class="loc-list-item">
         <p class="loc-list-item-text">{{ loc.name }}</p>
       </md-list-item>
       <md-divider></md-divider>
-      <md-list-item ng-repeat="loc in homeLeftM.locations" ng-click="homeLeftM.selectLoc(loc, 'left')" class="loc-list-item">
+      <md-list-item ng-repeat="loc in resultLeftM.locations" ng-click="resultLeftM.selectLoc(loc, 'left')" class="loc-list-item">
         <p class="loc-list-item-text">{{ loc.name }}</p>
       </md-list-item>
       <md-divider></md-divider>
-      <md-list-item ng-repeat="loc in homeLeftM.locations" ng-click="homeLeftM.selectLoc(loc, 'left')" class="loc-list-item">
+      <md-list-item ng-repeat="loc in resultLeftM.locations" ng-click="resultLeftM.selectLoc(loc, 'left')" class="loc-list-item">
         <p class="loc-list-item-text">{{ loc.name }}</p>
       </md-list-item>
 
@@ -25,20 +21,20 @@
 
       <!-- <md-divider></md-divider> -->
       <!-- test folder list -->
-<!--       <md-list-item ng-repeat="loc in homeLeftM.locations" ng-click="homeLeftM.test()" class="loc-list-item">
+<!--       <md-list-item ng-repeat="loc in resultLeftM.locations" ng-click="resultLeftM.test()" class="loc-list-item">
         <p class="folder-list-item-text">{{ loc.name }}</p> -->
         <!-- use img tag because of md-icon bug in mobile -->
-<!--         <span tabindex="-1" class="md-secondary" ng-click="homeLeftM.test()" aria-label="create">
+<!--         <span tabindex="-1" class="md-secondary" ng-click="resultLeftM.test()" aria-label="create">
           <img src="../assets/svg/icon_create.svg">
         </span>
-        <span tabindex="-1" class="md-secondary" ng-click="homeLeftM.test()" aria-label="delete">
+        <span tabindex="-1" class="md-secondary" ng-click="resultLeftM.test()" aria-label="delete">
           <img src="../assets/svg/icon_delete.svg">
         </span>
       </md-list-item> -->
 
       <!-- <md-divider></md-divider> -->
       <!-- mobile folder list -->
-<!--       <md-list-item ng-repeat="loc in homeLeftM.locations" ng-click="homeLeftM.closeSidenav('left')" class="loc-list-item">
+<!--       <md-list-item ng-repeat="loc in resultLeftM.locations" ng-click="resultLeftM.closeSidenav('left')" class="loc-list-item">
         <p class="folder-list-item-text-m">{{ loc.name }}</p> -->
         <!-- editor menu -->
         <!-- <md-menu ng-click="" class="md-secondary" aria-label="location"> -->

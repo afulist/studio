@@ -3,18 +3,18 @@
 
   angular
     .module('travel')
-    .controller('HomeLeftController', HomeLeftController);
+    .controller('ResultLeftMController', ResultLeftMController);
 
   /** @ngInject */
-  function HomeLeftController($log, $rootScope, $mdSidenav) {
+  function ResultLeftMController($log, $rootScope, $mdSidenav) {
     var vm = this;
 
     // ==view data==
     vm.locations = [
-      { locId: 0, name: '台灣', img: 'img/100-0.jpeg', newMessage: true },
-      { locId: 1, name: '日本', img: 'img/100-0.jpeg', newMessage: true },
-      { locId: 2, name: '韓國', img: 'img/100-1.jpeg', newMessage: false },
-      { locId: 3, name: '泰國', img: 'img/100-2.jpeg', newMessage: false }
+      { locId: 0, name: '最新', img: 'img/100-0.jpeg', newMessage: true },
+      { locId: 1, name: '台灣', img: 'img/100-0.jpeg', newMessage: true },
+      { locId: 2, name: '日本', img: 'img/100-1.jpeg', newMessage: false },
+      { locId: 3, name: '韓國國國國國國國國國國國國', img: 'img/100-2.jpeg', newMessage: false }
     ];
 
     // ==view func==
@@ -27,14 +27,11 @@
     // ==all func==
     // init
     function init() {
-      $log.debug('load HomeLeftController');
+      $log.debug('load HomeLeftMController(m)');
     }
 
     // close Sidenav without click locking
     function selectLoc(loc, menuId) {
-      if (loc === '最新') {
-        loc = { locId: 0, name: '最新', img: 'img/100-0.jpeg', newMessage: true };
-      }
       // scroll to top
       document.getElementById('top').scrollIntoView(true); // eslint-disable-line
       // close nav

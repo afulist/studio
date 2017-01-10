@@ -6,11 +6,11 @@
     .controller('HomeCenterController', HomeCenterController);
 
   /** @ngInject */
-  function HomeCenterController($log, $rootScope, $scope, mobileTitle) {
+  function HomeCenterController($log, $rootScope, $scope, mobileFeature) {
     var vm = this;
 
     // ==view data==
-    vm.ios = mobileTitle.ios;
+    vm.ios = mobileFeature.ios;
     var url = 'https://material.angularjs.org/1.0.6/img/list/60.jpeg';
     vm.userImage = {'background-image':'url('+ url +')'};
     vm.plansSort = [

@@ -3,10 +3,10 @@
 
   angular
     .module('travel')
-    .factory('mobileTitle', mobileTitle);
+    .factory('mobileFeature', mobileFeature);
 
   /** @ngInject */
-  function mobileTitle() {
+  function mobileFeature() {
     var ios = (navigator.userAgent.match(/(iPad|iPhone|iPod)/i)) ? true : false;
     return {
       ios: ios,

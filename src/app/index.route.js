@@ -56,12 +56,12 @@
             }
         },
         resolve: {
-          mobileTitle: 'mobileTitle',
-          initPage: ['mobileTitle', function(mobileTitle){
-            mobileTitle.title = '首頁';
-            mobileTitle.optLeftName = '地區';
-            mobileTitle.optRightName = '粉絲團';
-            return mobileTitle;
+          mobileFeature: 'mobileFeature',
+          initPage: ['mobileFeature', function(mobileFeature){
+            mobileFeature.title = '首頁';
+            mobileFeature.optLeftName = '地區';
+            mobileFeature.optRightName = '粉絲團';
+            return mobileFeature;
           }]
         }
       })
@@ -97,12 +97,12 @@
             }
         },
         resolve: {
-          mobileTitle: 'mobileTitle',
-          initPage: ['mobileTitle', function(mobileTitle){
-            mobileTitle.title = '我的規劃';
-            mobileTitle.optLeftName = '資料夾';
-            mobileTitle.optRightName = '';
-            return mobileTitle;
+          mobileFeature: 'mobileFeature',
+          initPage: ['mobileFeature', function(mobileFeature){
+            mobileFeature.title = '我的規劃';
+            mobileFeature.optLeftName = '資料夾';
+            mobileFeature.optRightName = '';
+            return mobileFeature;
           }]
         }
       })
@@ -138,12 +138,12 @@
             }
         },
         resolve: {
-          mobileTitle: 'mobileTitle',
-          initPage: ['mobileTitle', function(mobileTitle){
-            mobileTitle.title = '我的收藏';
-            mobileTitle.optLeftName = '資料夾';
-            mobileTitle.optRightName = '';
-            return mobileTitle;
+          mobileFeature: 'mobileFeature',
+          initPage: ['mobileFeature', function(mobileFeature){
+            mobileFeature.title = '我的收藏';
+            mobileFeature.optLeftName = '資料夾';
+            mobileFeature.optRightName = '';
+            return mobileFeature;
           }]
         }
       })
@@ -159,12 +159,12 @@
             }
         },
         resolve: {
-          mobileTitle: 'mobileTitle',
-          initPage: ['mobileTitle', function(mobileTitle){
-            mobileTitle.title = '更多';
-            mobileTitle.optLeftName = '';
-            mobileTitle.optRightName = '';
-            return mobileTitle;
+          mobileFeature: 'mobileFeature',
+          initPage: ['mobileFeature', function(mobileFeature){
+            mobileFeature.title = '更多';
+            mobileFeature.optLeftName = '';
+            mobileFeature.optRightName = '';
+            return mobileFeature;
           }]
         }
       })
@@ -200,13 +200,13 @@
             }
         },
         resolve: {
-          mobileTitle: 'mobileTitle',
-          initPage: ['mobileTitle', function(mobileTitle){
-            mobileTitle.title = '搜尋';
-            mobileTitle.optLeftName = '返回';
-            mobileTitle.prevState = 'mainLayout.searchm';
-            mobileTitle.optRightName = '';
-            return mobileTitle;
+          mobileFeature: 'mobileFeature',
+          initPage: ['mobileFeature', function(mobileFeature){
+            mobileFeature.title = '搜尋';
+            mobileFeature.optLeftName = '返回';
+            mobileFeature.prevState = 'mainLayout.searchm';
+            mobileFeature.optRightName = '';
+            return mobileFeature;
           }]
         }
       })
@@ -222,12 +222,12 @@
             }
         },
         resolve: {
-          mobileTitle: 'mobileTitle',
-          initPage: ['mobileTitle', function(mobileTitle){
-            mobileTitle.title = '搜尋';
-            mobileTitle.optLeftName = '';
-            mobileTitle.optRightName = '';
-            return mobileTitle;
+          mobileFeature: 'mobileFeature',
+          initPage: ['mobileFeature', function(mobileFeature){
+            mobileFeature.title = '搜尋';
+            mobileFeature.optLeftName = '';
+            mobileFeature.optRightName = '';
+            return mobileFeature;
           }]
         }
       })
@@ -263,13 +263,13 @@
             }
         },
         resolve: {
-          mobileTitle: 'mobileTitle',
-          initPage: ['mobileTitle', function(mobileTitle){
-            mobileTitle.title = '首頁';
-            mobileTitle.optLeftName = '返回';
-            mobileTitle.prevState = 'mainLayout.home';
-            mobileTitle.optRightName = '功能';
-            return mobileTitle;
+          mobileFeature: 'mobileFeature',
+          initPage: ['mobileFeature', function(mobileFeature){
+            mobileFeature.title = '首頁';
+            mobileFeature.optLeftName = '返回';
+            mobileFeature.prevState = 'mainLayout.home';
+            mobileFeature.optRightName = '功能';
+            return mobileFeature;
           }]
         }
       })
@@ -305,13 +305,13 @@
             }
         },
         resolve: {
-          mobileTitle: 'mobileTitle',
-          initPage: ['mobileTitle', function(mobileTitle){
-            mobileTitle.title = '我的收藏';
-            mobileTitle.optLeftName = '返回';
-            mobileTitle.prevState = 'mainLayout.myfavor';
-            mobileTitle.optRightName = '功能';
-            return mobileTitle;
+          mobileFeature: 'mobileFeature',
+          initPage: ['mobileFeature', function(mobileFeature){
+            mobileFeature.title = '我的收藏';
+            mobileFeature.optLeftName = '返回';
+            mobileFeature.prevState = 'mainLayout.myfavor';
+            mobileFeature.optRightName = '功能';
+            return mobileFeature;
           }]
         }
       })
@@ -347,13 +347,13 @@
             }
         },
         resolve: {
-          mobileTitle: 'mobileTitle',
-          initPage: ['mobileTitle', function(mobileTitle){
-            mobileTitle.title = '我的規劃';
-            mobileTitle.optLeftName = '返回';
-            mobileTitle.prevState = 'mainLayout.myplan';
-            mobileTitle.optRightName = '功能';
-            return mobileTitle;
+          mobileFeature: 'mobileFeature',
+          initPage: ['mobileFeature', function(mobileFeature){
+            mobileFeature.title = '我的規劃';
+            mobileFeature.optLeftName = '返回';
+            mobileFeature.prevState = 'mainLayout.myplan';
+            mobileFeature.optRightName = '功能';
+            return mobileFeature;
           }]
         }
       })
@@ -389,13 +389,13 @@
             }
         },
         resolve: {
-          mobileTitle: 'mobileTitle',
-          initPage: ['mobileTitle', function(mobileTitle){
-            mobileTitle.title = '我的規劃';
-            mobileTitle.optLeftName = '返回';
-            mobileTitle.prevState = 'tripLayout.myplan';
-            mobileTitle.optRightName = '功能';
-            return mobileTitle;
+          mobileFeature: 'mobileFeature',
+          initPage: ['mobileFeature', function(mobileFeature){
+            mobileFeature.title = '我的規劃';
+            mobileFeature.optLeftName = '返回';
+            mobileFeature.prevState = 'tripLayout.myplan';
+            mobileFeature.optRightName = '功能';
+            return mobileFeature;
           }]
         }
       })

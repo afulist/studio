@@ -21,7 +21,7 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController($element, $log, $mdSidenav, $mdBottomSheet, $scope, $state, $timeout, mobileTitle) {
+    function NavbarController($element, $log, $mdSidenav, $mdBottomSheet, $scope, $state, $timeout, mobileFeature) {
       var vm = this;
 
       // ==view data==
@@ -67,10 +67,10 @@
             });
           }
           // get title in mobile navBar
-          vm.titleM = mobileTitle.title;
-          vm.optLeftNameM = mobileTitle.optLeftName;
-          vm.prevStateM = mobileTitle.prevState;
-          vm.optRightNameM = mobileTitle.optRightName;
+          vm.titleM = mobileFeature.title;
+          vm.optLeftNameM = mobileFeature.optLeftName;
+          vm.prevStateM = mobileFeature.prevState;
+          vm.optRightNameM = mobileFeature.optRightName;
         });
       }
 

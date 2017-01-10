@@ -7,7 +7,9 @@
 
   /** @ngInject */
   function mobileTitle() {
+    var ios = (navigator.userAgent.match(/(iPad|iPhone|iPod)/i)) ? true : false;
     return {
+      ios: ios,
       title: '',
       optLeftName: '',
       prevState: '',

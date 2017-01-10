@@ -60,11 +60,11 @@
       <!-- mobile action -->
       <!-- use img tag because of md-icon bug in mobile -->
       <md-button hide-gt-sm hide-sm class="md-icon-button primary-btn" aria-label="thumb up">
-        <img class="icon-in-btn-m" src="../assets/svg/icon_thumb.svg">
+        <img ng-class="{'icon-in-btn-m': resultCenter.ios==false}" src="../assets/svg/icon_thumb.svg">
       </md-button>
       <span hide-gt-sm hide-sm class="icon-m-count-l">1234444</span>
       <md-button hide-gt-sm hide-sm class="md-icon-button primary-btn" aria-label="favorite">
-        <img class="icon-in-btn-m" src="../assets/svg/icon_favor.svg">
+        <img ng-class="{'icon-in-btn-m': resultCenter.ios==false}" src="../assets/svg/icon_favor.svg">
       </md-button>
       <span hide-gt-sm hide-sm class="icon-m-count-r">1234</span>
     </md-card-actions>
@@ -108,11 +108,11 @@
       <!-- mobile action -->
       <!-- use img tag because of md-icon bug in mobile -->
       <md-button hide-gt-md hide-md class="md-icon-button primary-btn" aria-label="thumb up">
-        <img class="icon-in-btn-m" src="../assets/svg/icon_thumb.svg">
+        <img ng-class="{'icon-in-btn-m': resultCenter.ios==false}" src="../assets/svg/icon_thumb.svg">
       </md-button>
       <span hide-gt-md hide-md class="icon-m-count-l">1234444</span>
       <md-button hide-gt-md hide-md class="md-icon-button primary-btn" aria-label="favorite">
-        <img class="icon-in-btn-m" src="../assets/svg/icon_favor.svg">
+        <img ng-class="{'icon-in-btn-m': resultCenter.ios==false}" src="../assets/svg/icon_favor.svg">
       </md-button>
       <span hide-gt-md hide-md class="icon-m-count-r">1234</span>
     </md-card-actions>

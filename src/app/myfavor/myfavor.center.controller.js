@@ -6,10 +6,11 @@
     .controller('MyfavorCenterController', MyfavorCenterController);
 
   /** @ngInject */
-  function MyfavorCenterController($log, $rootScope, $scope) {
+  function MyfavorCenterController($log, $rootScope, $scope, mobileFeature) {
     var vm = this;
 
     // ==view data==
+    vm.ios = mobileFeature.ios;
     var url = 'https://material.angularjs.org/1.0.6/img/list/60.jpeg';
     vm.userImage = {'background-image':'url('+ url +')'};
     vm.plansSort = [

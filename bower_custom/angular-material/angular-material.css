@@ -494,7 +494,7 @@ md-bottom-sheet {
     opacity: 0;
     -webkit-transform: translate3d(0, 100%, 0);
             transform: translate3d(0, 100%, 0); }
-  md-bottom-sheet.ng-enter-active {
+  md-bottom-sheet.ng-enter.ng-enter-active {
     opacity: 1;
     display: block;
     -webkit-transform: translate3d(0, 80px, 0) !important;

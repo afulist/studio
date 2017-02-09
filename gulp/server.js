@@ -41,6 +41,7 @@ function browserSyncInit(baseDir, browser) {
     startPath: '/',
     server: server,
     browser: browser,
+    // CUSTOM: favor setting
     notify: {
       styles: {
           top: 'auto',
